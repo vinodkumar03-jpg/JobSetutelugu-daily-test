@@ -1,59 +1,69 @@
 let currentQuestion = 0;
-
 let questions = [];
+let answers = [];
 
 document.getElementById("student").innerHTML =
-"Welcome " + localStorage.getItem("studentName");
+"Welcome, " + localStorage.getItem("studentName");
 
 fetch("questions.json")
-.then(res => res.json())
-.then(data=>{
-
-questions=data;
-
-showQuestion();
-
+.then(response => response.json())
+.then(data => {
+    questions = data;
+    showQuestion();
 });
 
 function showQuestion(){
 
-document.getElementById("question").innerHTML=
-questions[currentQuestion].question;
+    let q = questions[currentQuestion];
 
-let html="";
+    document.getElementById("question").innerHTML =
+    "Q" + (currentQuestion + 1) + ". " + q.question;
 
-questions[currentQuestion].options.forEach((option,index)=>{
+    let html = "";
 
-html += `
-<div class="option" onclick="selectAnswer(${index})">
-${option}
-</div>
-`;
+    q.options.forEach((option,index)=>{
 
-});
+        html += `
+        <div class="option">
+            <input type="radio"
+                   name="answer"
+                   value="${index}"
+                   ${answers[currentQuestion]==index ? "checked":""}>
+            ${option}
+        </div>
+        `;
 
-document.getElementById("options").innerHTML=html;
+    });
 
-}
-
-function selectAnswer(answer){
-
-alert("Selected Option : "+answer);
+    document.getElementById("options").innerHTML = html;
 
 }
 
 function nextQuestion(){
 
-currentQuestion++;
+    let selected =
+    document.querySelector('input[name="answer"]:checked');
 
-if(currentQuestion>=questions.length){
+    if(selected){
 
-alert("Test Completed");
+        answers[currentQuestion] =
+        Number(selected.value);
 
-return;
+    }
 
-}
+    currentQuestion++;
 
-showQuestion();
+    if(currentQuestion >= questions.length){
+
+        localStorage.setItem("answers",
+        JSON.stringify(answers));
+
+        window.location.href="result.html";
+
+        return;
+
+    }
+
+    showQuestion();
 
 }
