@@ -1,9 +1,15 @@
  function startTest() {
 
-    let name = document.querySelector("input[type='text']").value;
+    let name = document.getElementById("studentName").value;
+    let mobile = document.getElementById("mobileNumber").value;
 
-    if(name==""){
+    if (name.trim() === "") {
         alert("Please enter your Name");
+        return;
+    }
+
+    if (mobile.length !== 10) {
+        alert("Please enter a valid 10-digit Mobile Number");
         return;
     }
 
