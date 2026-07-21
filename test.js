@@ -69,25 +69,50 @@ function showQuestion() {
 
     q.options.forEach((option, index) => {
 
-       html += `
-<label class="option">
+        html += `
+        <label class="option">
 
-<input
-type="radio"
-name="answer"
-value="${index}"
-${answers[currentQuestion] == index ? "checked" : ""}
-style="display:none;">
+            <input
+                type="radio"
+                name="answer"
+                value="${index}"
+                ${answers[currentQuestion] == index ? "checked" : ""}>
 
-<span>${option}</span>
+            <span>${option}</span>
 
-</label>
-`;
-        
+        </label>
+        `;
 
     });
 
     document.getElementById("options").innerHTML = html;
+
+    // Highlight selected option when clicked
+    document.querySelectorAll(".option").forEach(option => {
+
+        option.addEventListener("click", function(){
+
+            document.querySelectorAll(".option").forEach(o=>{
+                o.classList.remove("selected");
+            });
+
+            this.classList.add("selected");
+
+            this.querySelector("input").checked = true;
+
+        });
+
+    });
+
+    // If already answered, highlight it
+    let checked =
+    document.querySelector('input[name="answer"]:checked');
+
+    if(checked){
+
+        checked.parentElement.classList.add("selected");
+
+    }
 
     let btn = document.getElementById("nextBtn");
 
@@ -102,106 +127,5 @@ style="display:none;">
     }
 
     loadPalette();
-
-}
-
-// ================= QUESTION PALETTE =================
-
-function loadPalette() {
-
-    let html = "";
-
-    questions.forEach((q, index) => {
-
-        let cls = "palette-btn";
-
-        if (index == currentQuestion)
-            cls += " current";
-
-        if (answers[index] != undefined)
-            cls += " answered";
-
-        html += `
-        <button
-            class="${cls}"
-            onclick="gotoQuestion(${index})">
-            ${index + 1}
-        </button>
-        `;
-
-    });
-
-    document.getElementById("palette").innerHTML = html;
-
-}
-
-// ================= GO TO QUESTION =================
-
-function gotoQuestion(index) {
-
-    let selected =
-    document.querySelector('input[name="answer"]:checked');
-
-    if(selected){
-
-        answers[currentQuestion] = Number(selected.value);
-
-    }
-
-    currentQuestion = index;
-
-    showQuestion();
-
-}
-
-// ================= NEXT QUESTION =================
-
-function nextQuestion() {
-
-    let selected =
-    document.querySelector('input[name="answer"]:checked');
-
-    if(selected){
-
-        answers[currentQuestion] = Number(selected.value);
-
-    }
-
-    if(currentQuestion < questions.length - 1){
-
-        currentQuestion++;
-
-        showQuestion();
-
-    }else{
-
-        localStorage.setItem("answers", JSON.stringify(answers));
-
-        window.location.href = "result.html";
-
-    }
-
-}
-
-// ================= PREVIOUS QUESTION =================
-
-function previousQuestion() {
-
-    let selected =
-    document.querySelector('input[name="answer"]:checked');
-
-    if(selected){
-
-        answers[currentQuestion] = Number(selected.value);
-
-    }
-
-    if(currentQuestion > 0){
-
-        currentQuestion--;
-
-        showQuestion();
-
-    }
 
 }
