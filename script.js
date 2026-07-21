@@ -1,4 +1,4 @@
- function startTest() {
+function startTest() {
 
     let name = document.getElementById("studentName").value;
     let mobile = document.getElementById("mobileNumber").value;
@@ -8,7 +8,7 @@
         return;
     }
 
-    if (mobile.length !== 10) {
+    if (mobile.length !== 10 || isNaN(mobile)) {
         alert("Please enter a valid 10-digit Mobile Number");
         return;
     }
