@@ -1,92 +1,112 @@
-/* ===========================
-   JOBSETU TELUGU - STYLE.CSS
-=========================== */
+/* =========================
+   JOBSETU TELUGU
+   Professional White Theme
+========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#0f172a;
-    color:#fff;
+    background:#f4f7fb;
+    color:#222;
 }
 
 .container{
-    max-width:1200px;
-    margin:30px auto;
-    background:#1e293b;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
+    width:95%;
+    max-width:1300px;
+    margin:25px auto;
 }
 
-h1{
-    text-align:center;
-    color:#38bdf8;
+/* Header */
+
+.header{
+    background:#2563eb;
+    color:#fff;
+    padding:18px 30px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     margin-bottom:20px;
+}
+
+.header h1{
+    font-size:30px;
+}
+
+#student{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* Timer */
+
+.timer-box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 #timer{
     font-size:28px;
+    color:#2563eb;
     font-weight:bold;
-    color:#38bdf8;
-    text-align:right;
-    margin-bottom:20px;
 }
 
-#student{
-    margin-bottom:20px;
-}
+/* Layout */
 
 .test-layout{
     display:flex;
-    gap:25px;
+    gap:20px;
 }
+
+/* Left */
 
 .left-panel{
     flex:3;
 }
 
-.right-panel{
-    flex:1;
-    background:#334155;
-    padding:15px;
-    border-radius:10px;
-}
-
 .question-box{
-    background:#334155;
-    padding:20px;
-    border-radius:10px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
 #questionNumber{
-    color:#38bdf8;
+    color:#2563eb;
     margin-bottom:15px;
 }
 
 #question{
-    margin-bottom:20px;
+    margin-bottom:25px;
+    line-height:1.5;
 }
 
-/* OPTION */
+/* Options */
 
 .option{
     display:block;
-    background:#475569;
-    padding:18px;
+    background:#f8fafc;
+    border:2px solid #dbeafe;
     border-radius:10px;
+    padding:18px;
     margin-bottom:15px;
     cursor:pointer;
-    transition:.3s;
-    border:2px solid transparent;
+    transition:.25s;
 }
 
 .option:hover{
-    background:#2563eb;
+    background:#dbeafe;
 }
 
 .option input{
@@ -95,10 +115,11 @@ h1{
 
 .option.selected{
     background:#2563eb;
-    border:2px solid #38bdf8;
+    color:white;
+    border-color:#2563eb;
 }
 
-/* BUTTONS */
+/* Buttons */
 
 .buttons{
     display:flex;
@@ -106,17 +127,14 @@ h1{
     margin-top:25px;
 }
 
-.buttons button{
-    flex:1;
-}
-
 button{
+    flex:1;
     padding:15px;
     border:none;
-    border-radius:8px;
-    cursor:pointer;
+    border-radius:10px;
     background:#2563eb;
     color:white;
+    cursor:pointer;
     font-size:18px;
 }
 
@@ -124,13 +142,27 @@ button:hover{
     background:#1d4ed8;
 }
 
-/* PALETTE */
+/* Right Panel */
+
+.right-panel{
+    flex:1;
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.right-panel h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+/* Palette */
 
 #palette{
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:10px;
-    margin-top:10px;
 }
 
 .palette-btn{
@@ -138,31 +170,34 @@ button:hover{
     height:42px;
     border-radius:50%;
     border:none;
-    background:#64748b;
-    color:white;
+    background:#cbd5e1;
+    color:#000;
+    font-weight:bold;
     cursor:pointer;
 }
 
-.palette-btn.answered{
-    background:green;
-}
-
 .palette-btn.current{
-    border:3px solid yellow;
+    border:3px solid orange;
 }
 
-/* RESULT */
+.palette-btn.answered{
+    background:#16a34a;
+    color:white;
+}
+
+/* Result */
 
 .result-card{
-    background:#334155;
+    background:#fff;
     padding:20px;
+    border-radius:12px;
     margin-top:20px;
-    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-/* MOBILE */
+/* Mobile */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
 .test-layout{
     flex-direction:column;
@@ -170,10 +205,6 @@ button:hover{
 
 .right-panel{
     order:-1;
-}
-
-#palette{
-    grid-template-columns:repeat(5,1fr);
 }
 
 }
