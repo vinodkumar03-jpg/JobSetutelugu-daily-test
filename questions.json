@@ -1,35 +1,47 @@
 [
   {
-    "question": "What is the capital of Telangana?",
+    "question": "The famous Lagoon Lake of India is:",
     "options": [
-      "Hyderabad",
-      "Warangal",
-      "Karimnagar",
-      "Nizamabad"
+      "Dal Lake",
+      "Chilka Lake",
+      "Pulicat Lake",
+      "Mansarover"
+    ],
+    "answer": 1,
+    "explanation": "Chilka Lake is a brackish water lagoon, spread over the Puri, Khurda and Ganjam districts of Orissa state on the east coast of India, at the mouth of the Daya River, flowing into the Bay of Bengal, covering an area of over 1,100 sq. km. It is the largest coastal lagoon in India and the second largest lagoon in the World. It is the largest wintering ground for migratory birds on the Indian sub-continent."
+  },
+  {
+    "question": "Which of the following passes lies in the Sutlej valley?",
+    "options": [
+      "Nathu La",
+      "Jelep La",
+      "Shipki La",
+      "Sherabathanga"
+    ],
+    "answer": 2,
+    "explanation": "Shipki La is a mountain pass and border post on the India-China border. The river Sutlej enters India through this pass. It is an offshoot of the ancient Silk Road. It is located in Kinnaur district in the state of Himachal Pradesh, India, and Tibet Autonomous Region in People’s Republic of China. The pass is India’s third border post for trade with China after Nathu La in Sikkim, and Lipulekh in Uttarakhand. The pass is close to town of Khab."
+  },
+  {
+    "question": "Where is Panzseer valley situated?",
+    "options": [
+      "Lebanon",
+      " Afghanistan",
+      "Jammu and Kashmir, India",
+      "Syria"
+    ],
+    "answer": 1,
+    "explanation": "The Panjshir Valley is a valley in north-central Afghanistan, 150 km north of Kabul, near the Hindu Kush mountain range. Located in the Panjshir Province it is divided by the Panjshir River. The valley is home to more than 140,000 people, including Afghanistan’s largest concentration of ethnic Tajiks. It literally means ‘Valley of the Five Lions."
+  },
+  {
+    "question": "Which of the following cities lies to the western-most longitude?",
+    "options": [
+      "Jaipur",
+      " Nagpur",
+      "Bhopal",
+      "Hyderabad"
     ],
     "answer": 0,
-    "explanation": "Hyderabad is the capital of Telangana."
-  },
-  {
-    "question": "How many states are there in India?",
-    "options": [
-      "27",
-      "28",
-      "29",
-      "30"
-    ],
-    "answer": 1,
-    "explanation": "India currently has 28 states."
-  },
-  {
-    "question": "Who is known as the Father of the Indian Constitution?",
-    "options": [
-      "Mahatma Gandhi",
-      "Dr. B. R. Ambedkar",
-      "Jawaharlal Nehru",
-      "Sardar Patel"
-    ],
-    "answer": 1,
-    "explanation": "Dr. B. R. Ambedkar is regarded as the Father of the Indian Constitution."
+    "explanation":"jaipur is the headquarters of Jaipur district which is situated in the eastern part of Rajasthan. It is located at 26°92’N 75° 82′ E. It has an average elevation of 431 metres (1417 ft). The major rivers passing through the Jaipur district are Banas and Banganga."
   }
 ]
+
