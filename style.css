@@ -27,19 +27,14 @@ body{
 
 }
 
-.logo{
-
-    width:100px;
-
-    height:100px;
-
+.small-logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
     border-radius:50%;
-
-    background:white;
-
-    padding:8px;
-
-    margin-bottom:15px;
+    background:#fff;
+    padding:3px;
+}
 
 }
 
