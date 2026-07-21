@@ -69,16 +69,21 @@ function showQuestion() {
 
     q.options.forEach((option, index) => {
 
-        html += `
-            <div class="option">
-                <input
-                    type="radio"
-                    name="answer"
-                    value="${index}"
-                    ${answers[currentQuestion] == index ? "checked" : ""}>
-                ${option}
-            </div>
-        `;
+       html += `
+<label class="option">
+
+<input
+type="radio"
+name="answer"
+value="${index}"
+${answers[currentQuestion] == index ? "checked" : ""}
+style="display:none;">
+
+<span>${option}</span>
+
+</label>
+`;
+        
 
     });
 
