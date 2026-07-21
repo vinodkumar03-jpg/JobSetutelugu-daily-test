@@ -99,6 +99,21 @@ footer{
 .answered{
     background:green !important;
 }
+.result-card{
+    background:#334155;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+}
+
+.result-card h2{
+    margin-bottom:10px;
+}
+
+.result-card p{
+    margin:8px 0;
+    line-height:1.6;
+}
 
 .current{
     border:3px solid yellow;
