@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "question": "What is the capital of Telangana?",
+    "options": [
+      "Hyderabad",
+      "Warangal",
+      "Karimnagar",
+      "Nizamabad"
+    ],
+    "answer": 0,
+    "explanation": "Hyderabad is the capital of Telangana."
+  },
+  {
+    "question": "How many states are there in India?",
+    "options": [
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "India currently has 28 states."
+  },
+  {
+    "question": "Who is known as the Father of the Indian Constitution?",
+    "options": [
+      "Mahatma Gandhi",
+      "Dr. B. R. Ambedkar",
+      "Jawaharlal Nehru",
+      "Sardar Patel"
+    ],
+    "answer": 1,
+    "explanation": "Dr. B. R. Ambedkar is regarded as the Father of the Indian Constitution."
+  }
+]
