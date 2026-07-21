@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,6 +22,7 @@
     border-radius:8px;
     margin-top:15px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 .option:hover{
@@ -31,6 +34,23 @@
     color:#38bdf8;
     text-align:right;
     margin-bottom:20px;
+    font-weight:bold;
+}
+
+#questionNumber{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+    gap:15px;
+}
+
+.buttons button{
+    flex:1;
 }
 
 </style>
@@ -51,19 +71,30 @@
 
 <div class="question-box">
 
+<h3 id="questionNumber"></h3>
+
 <h2 id="question"></h2>
 
 <div id="options"></div>
 
 </div>
 
-<br>
+<div class="buttons">
 
-<button onclick="nextQuestion()">Next</button>
+<button onclick="previousQuestion()">
+Previous
+</button>
+
+<button id="nextBtn" onclick="nextQuestion()">
+Next
+</button>
+
+</div>
 
 </div>
 
 <script src="test.js"></script>
 
 </body>
+
 </html>
