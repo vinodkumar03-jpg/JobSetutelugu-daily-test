@@ -1,1 +1,69 @@
-<h1>Test Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JobSetu Telugu Test</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.question-box{
+    margin-top:30px;
+}
+
+.option{
+    background:#334155;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#2563eb;
+}
+
+#timer{
+    font-size:24px;
+    color:#38bdf8;
+    text-align:right;
+    margin-bottom:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>JOBSETU TELUGU</h1>
+
+<div id="timer">
+25:00
+</div>
+
+<h3 id="student"></h3>
+
+<div class="question-box">
+
+<h2 id="question"></h2>
+
+<div id="options"></div>
+
+</div>
+
+<br>
+
+<button onclick="nextQuestion()">Next</button>
+
+</div>
+
+<script src="test.js"></script>
+
+</body>
+</html>
