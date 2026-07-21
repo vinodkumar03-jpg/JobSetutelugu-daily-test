@@ -294,3 +294,170 @@ button{
 }
 
 }
+/* ========================= */
+/* EXAM PAGE */
+/* ========================= */
+
+.exam-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0d6efd;
+    color:#fff;
+    padding:15px 30px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.small-logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    padding:5px;
+}
+
+.timer{
+    background:#fff;
+    color:#0d6efd;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.student-box{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.progress{
+    width:90%;
+    max-width:1200px;
+    margin:15px auto;
+    background:#ddd;
+    height:10px;
+    border-radius:10px;
+}
+
+#progressBar{
+    width:0%;
+    height:10px;
+    background:#28a745;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.main-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+
+.question-section{
+    flex:3;
+    background:#fff;
+    border-radius:10px;
+    padding:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.palette{
+    flex:1;
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+#paletteButtons{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.palette button{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#dee2e6;
+    color:#000;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.palette button.answered{
+    background:#28a745;
+    color:#fff;
+}
+
+#options{
+    margin-top:25px;
+}
+
+.option{
+    background:#f8f9fa;
+    border:2px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    margin-bottom:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    background:#e9f3ff;
+    border-color:#0d6efd;
+}
+
+.option.selected{
+    background:#0d6efd;
+    color:#fff;
+    border-color:#0d6efd;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.buttons button{
+    width:180px;
+}
+
+@media(max-width:900px){
+
+.main-container{
+    flex-direction:column;
+}
+
+.palette{
+    width:100%;
+}
+
+.buttons button{
+    width:48%;
+}
+
+.exam-header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+}
