@@ -1,21 +1,33 @@
 function startTest() {
 
-    let name = document.getElementById("studentName").value;
-    let mobile = document.getElementById("mobileNumber").value;
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
 
-    if(name.trim()==""){
-        alert("Please enter your Name");
+    // Name Validation
+    if (name === "") {
+        alert("Please enter your name.");
         return;
     }
 
-    if(mobile.length!=10 || isNaN(mobile)){
-        alert("Please enter a valid 10-digit Mobile Number");
+    // Mobile Validation
+    if (mobile === "") {
+        alert("Please enter your mobile number.");
         return;
     }
 
-    localStorage.setItem("studentName",name);
-    localStorage.setItem("mobile",mobile);
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+    }
 
-    window.location.href="test.html";
+    // Save Student Details
+    localStorage.setItem("studentName", name);
+    localStorage.setItem("mobile", mobile);
 
+    // Reset Previous Test Data
+    localStorage.removeItem("answers");
+    localStorage.removeItem("testSubmitted");
+
+    // Open Test Page
+    window.location.href = "test.html";
 }
