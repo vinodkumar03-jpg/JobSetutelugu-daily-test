@@ -1,64 +1,78 @@
-let answers =
-JSON.parse(localStorage.getItem("answers"));
+let answers = JSON.parse(localStorage.getItem("answers"));
+let resultDiv = document.getElementById("result");
 
 fetch("questions.json")
+.then(response => response.json())
+.then(data => {
 
-.then(res=>res.json())
+    let questions = data;
+    let score = 0;
+    let html = "";
 
-.then(questions=>{
+    questions.forEach((q, index) => {
 
-let score = 0;
+        let userAnswer =
+            answers[index] != undefined
+            ? q.options[answers[index]]
+            : "Not Attempted";
 
-let html = "";
+        let correctAnswer =
+            q.options[q.answer];
 
-questions.forEach((q,index)=>{
+        let isCorrect =
+            answers[index] == q.answer;
 
-if(answers[index] == q.answer){
+        if(isCorrect)
+            score++;
 
-score++;
+        html += `
 
-}
+        <div class="result-card">
 
-html += `
-<hr>
+        <h2>
+        ${isCorrect ? "✅ Correct" : "❌ Incorrect"}
+        </h2>
 
-<h3>Question ${index+1}</h3>
+        <h3>Question ${index+1}</h3>
 
-<p>${q.question}</p>
+        <p>
+        <b>Question :</b><br>
+        ${q.question}
+        </p>
 
-<p>
-<b>Your Answer :</b>
+        <p style="color:${isCorrect ? "limegreen" : "red"};">
+        <b>Your Answer :</b>
+        ${userAnswer}
+        </p>
 
-${answers[index]!==undefined
-? q.options[answers[index]]
-: "Not Answered"}
+        ${
+            !isCorrect ?
+            `
+            <p style="color:limegreen;">
+            <b>Correct Answer :</b>
+            ${correctAnswer}
+            </p>
+            `
+            :
+            ""
+        }
 
-</p>
+        <p>
+        <b>Explanation :</b>
+        ${q.explanation}
+        </p>
 
-<p>
+        <hr>
 
-<b>Correct Answer :</b>
+        </div>
 
-${q.options[q.answer]}
+        `;
 
-</p>
+    });
 
-<p>
+    document.getElementById("score").innerHTML =
+    `Your Score : ${score} / ${questions.length}`;
 
-<b>Explanation :</b>
-
-${q.explanation}
-
-</p>
-
-`;
-
-});
-
-document.getElementById("score").innerHTML =
-"Your Score : " + score + " / " + questions.length;
-
-document.getElementById("review").innerHTML =
-html;
+    resultDiv.innerHTML = html;
 
 });
