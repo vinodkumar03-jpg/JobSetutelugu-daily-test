@@ -3,11 +3,12 @@ let currentQuestion = 0;
 let questions = [];
 let answers = [];
 
-// Welcome message
+// Welcome Message
 document.getElementById("student").innerHTML =
 "Welcome, " + localStorage.getItem("studentName");
 
-// Timer
+// ================= TIMER =================
+
 function startTimer() {
 
     let timer = setInterval(function () {
@@ -29,13 +30,15 @@ function startTimer() {
             alert("Time is Over!");
 
             window.location.href = "result.html";
+
         }
 
     }, 1000);
 
 }
 
-// Load Questions
+// ================= LOAD QUESTIONS =================
+
 fetch("questions.json")
 .then(response => response.json())
 .then(data => {
@@ -44,11 +47,14 @@ fetch("questions.json")
 
     showQuestion();
 
+    loadPalette();
+
     startTimer();
 
 });
 
-// Show Question
+// ================= SHOW QUESTION =================
+
 function showQuestion() {
 
     let q = questions[currentQuestion];
@@ -64,14 +70,14 @@ function showQuestion() {
     q.options.forEach((option, index) => {
 
         html += `
-        <div class="option">
-            <input
-                type="radio"
-                name="answer"
-                value="${index}"
-                ${answers[currentQuestion] == index ? "checked" : ""}>
-            ${option}
-        </div>
+            <div class="option">
+                <input
+                    type="radio"
+                    name="answer"
+                    value="${index}"
+                    ${answers[currentQuestion] == index ? "checked" : ""}>
+                ${option}
+            </div>
         `;
 
     });
@@ -81,42 +87,111 @@ function showQuestion() {
     let btn = document.getElementById("nextBtn");
 
     if (currentQuestion == questions.length - 1) {
+
         btn.innerHTML = "Finish Test";
+
     } else {
+
         btn.innerHTML = "Next";
+
     }
+
+    loadPalette();
 
 }
 
-// Next Question
-function nextQuestion() {
+// ================= QUESTION PALETTE =================
+
+function loadPalette() {
+
+    let html = "";
+
+    questions.forEach((q, index) => {
+
+        let cls = "palette-btn";
+
+        if (index == currentQuestion)
+            cls += " current";
+
+        if (answers[index] != undefined)
+            cls += " answered";
+
+        html += `
+        <button
+            class="${cls}"
+            onclick="gotoQuestion(${index})">
+            ${index + 1}
+        </button>
+        `;
+
+    });
+
+    document.getElementById("palette").innerHTML = html;
+
+}
+
+// ================= GO TO QUESTION =================
+
+function gotoQuestion(index) {
 
     let selected =
-        document.querySelector('input[name="answer"]:checked');
+    document.querySelector('input[name="answer"]:checked');
 
-    if (selected) {
+    if(selected){
+
         answers[currentQuestion] = Number(selected.value);
+
     }
 
-    currentQuestion++;
-
-    if (currentQuestion >= questions.length) {
-
-        localStorage.setItem("answers", JSON.stringify(answers));
-
-        window.location.href = "result.html";
-
-        return;
-    }
+    currentQuestion = index;
 
     showQuestion();
 
 }
 
-// Previous Question
+// ================= NEXT QUESTION =================
+
+function nextQuestion() {
+
+    let selected =
+    document.querySelector('input[name="answer"]:checked');
+
+    if(selected){
+
+        answers[currentQuestion] = Number(selected.value);
+
+    }
+
+    if(currentQuestion < questions.length - 1){
+
+        currentQuestion++;
+
+        showQuestion();
+
+    }else{
+
+        localStorage.setItem("answers", JSON.stringify(answers));
+
+        window.location.href = "result.html";
+
+    }
+
+}
+
+// ================= PREVIOUS QUESTION =================
+
 function previousQuestion() {
 
-    if (currentQuestion > 0) {
+    let selected =
+    document.querySelector('input[name="answer"]:checked');
+
+    if(selected){
+
+        answers[currentQuestion] = Number(selected.value);
+
+    }
+
+    if(currentQuestion > 0){
 
         currentQuestion--;
 
