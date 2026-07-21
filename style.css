@@ -125,16 +125,21 @@ footer{
     margin-top:15px;
     border-radius:10px;
     cursor:pointer;
-    transition:.3s;
+    transition:0.3s;
     font-size:22px;
+}
+
+.option input{
+    display:none;
 }
 
 .option:hover{
     background:#2563eb;
 }
 
-.option input{
-    display:none;
+.option.selected{
+    background:#2563eb;
+    border:3px solid #38bdf8;
 }
 
 .option.selected{
