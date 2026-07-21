@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>JobSetu Telugu - Daily Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>JobSetu Telugu - Online Test</title>
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="exam-header">
 
-<div class="header">
+    <div class="left">
 
-<h1>JOBSETU TELUGU</h1>
+        <img src="logo.png" class="small-logo">
 
-<div id="student"></div>
+        <div>
+
+            <h2>JOBSETU TELUGU</h2>
+
+            <p>Daily Mock Test Series</p>
+
+        </div>
+
+    </div>
+
+    <div class="timer">
+
+        ⏱ <span id="timer">25:00</span>
+
+    </div>
 
 </div>
 
-<div class="timer-box">
+<div class="student-box">
 
-<h3>Daily Mock Test</h3>
+    <h3>
+        Welcome,
+        <span id="studentName"></span>
+    </h3>
 
-<div id="timer">25:00</div>
+    <p>Total Questions : <b id="totalQuestions">25</b></p>
 
 </div>
 
-<div class="test-layout">
+<div class="progress">
 
-<div class="left-panel">
+    <div id="progressBar"></div>
 
-<div class="question-box">
+</div>
 
-<h3 id="questionNumber"></h3>
+<div class="main-container">
 
-<h2 id="question"></h2>
+<div class="question-section">
 
-<div id="options"></div>
+<h2 id="questionNumber">
+
+Question 1
+
+</h2>
+
+<h3 id="questionText">
+
+Loading Question...
+
+</h3>
+
+<div id="options">
+
+</div>
 
 <div class="buttons">
 
-<button onclick="previousQuestion()">Previous</button>
+<button onclick="previousQuestion()">
 
-<button id="nextBtn" onclick="nextQuestion()">Next</button>
+◀ Previous
+
+</button>
+
+<button onclick="nextQuestion()">
+
+Next ▶
+
+</button>
 
 </div>
 
 </div>
 
-</div>
+<div class="palette">
 
-<div class="right-panel">
+<h3>
 
-<h3>Question Palette</h3>
+Questions
 
-<div id="palette"></div>
+</h3>
+
+<div id="paletteButtons">
 
 </div>
 
@@ -71,3 +112,4 @@
 <script src="test.js"></script>
 
 </body>
+</html>
