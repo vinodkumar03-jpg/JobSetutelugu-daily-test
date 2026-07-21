@@ -118,3 +118,26 @@ footer{
 .current{
     border:3px solid yellow;
 }
+.option{
+    display:block;
+    background:#334155;
+    padding:20px;
+    margin-top:15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:22px;
+}
+
+.option:hover{
+    background:#2563eb;
+}
+
+.option input{
+    display:none;
+}
+
+.option.selected{
+    background:#2563eb;
+    border:3px solid #38bdf8;
+}
