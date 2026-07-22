@@ -28,8 +28,8 @@ body{
 }
 
 .small-logo{
-    width:35px !important;
-    height:35px !important;
+    width:25px !important;
+    height:25px !important;
     object-fit:contain;
     border-radius:25%;
     background:#fff;
