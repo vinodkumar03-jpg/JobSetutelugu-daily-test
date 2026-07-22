@@ -28,13 +28,13 @@ body{
 }
 
 .small-logo{
-    width:38px;
-    height:38px;
+    width:12px !important;
+    height:12px !important;
     object-fit:contain;
-    background:#fff;
     border-radius:50%;
-    padding:1px;
-    border:2px solid white;
+    background:#fff;
+    padding:2px;
+}
 }
 
 }
