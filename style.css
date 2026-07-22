@@ -28,12 +28,12 @@ body{
 }
 
 .small-logo{
-    width:30px !important;
-    height:30px !important;
+    width:50px !important;
+    height:50px !important;
     object-fit:contain;
-    border-radius:50%;
+    border-radius:75%;
     background:#fff;
-    padding:4px;
+    padding:10px;
 }
 }
 
