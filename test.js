@@ -1,200 +1,124 @@
-// =========================
-// JOBSETU TELUGU TEST.JS
-// =========================
+// ======================================
+// JobSetu Telugu Dashboard
+// ======================================
 
-let timeLeft = 25 * 60;
-let currentQuestion = 0;
-let questions = [];
-let answers = [];
+// Start Test Button
 
-// Welcome Message
-document.getElementById("student").innerHTML =
-"Welcome, " + (localStorage.getItem("studentName") || "Student");
+const startBtn = document.getElementById("startBtn");
 
-// ---------------- Timer ----------------
+if (startBtn) {
 
-function startTimer(){
+    startBtn.addEventListener("click", function () {
 
-    const timer = setInterval(function(){
+        // Smooth Button Animation
+        startBtn.innerHTML = "Loading...";
+        startBtn.disabled = true;
 
-        let minutes = Math.floor(timeLeft / 60);
-        let seconds = timeLeft % 60;
+        setTimeout(() => {
 
-        document.getElementById("timer").innerHTML =
-        `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+            // Redirect to Exam Page
+            // Change this if your exam page has another name
 
-        timeLeft--;
+            window.location.href = "exam.html";
 
-        if(timeLeft < 0){
+        }, 800);
 
-            clearInterval(timer);
-
-            localStorage.setItem(
-                "answers",
-                JSON.stringify(answers)
-            );
-
-            alert("Time is Over!");
-
-            window.location.href = "result.html";
-        }
-
-    },1000);
+    });
 
 }
 
-// ---------------- Load Questions ----------------
+// ======================================
+// Exam Cards Hover Effect
+// ======================================
 
-fetch("questions.json")
-.then(res => res.json())
-.then(data=>{
+const examCards = document.querySelectorAll(".exam-card");
 
-    questions = data;
+examCards.forEach(card => {
 
-    showQuestion();
+    card.addEventListener("mouseenter", () => {
 
-    startTimer();
+        card.style.boxShadow = "0 15px 35px rgba(37,99,235,.18)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.boxShadow = "0 8px 25px rgba(0,0,0,.05)";
+
+    });
 
 });
 
-// ---------------- Show Question ----------------
+// ======================================
+// Subject Cards
+// ======================================
 
-function showQuestion(){
+const subjectCards = document.querySelectorAll(".subject-card");
 
-    let q = questions[currentQuestion];
+subjectCards.forEach(card => {
 
-    document.getElementById("questionNumber").innerHTML =
-    `Question ${currentQuestion+1} of ${questions.length}`;
+    card.addEventListener("click", () => {
 
-    document.getElementById("question").innerHTML =
-    q.question;
+        subjectCards.forEach(c => c.classList.remove("active"));
 
-    let html = "";
-
-    q.options.forEach((option,index)=>{
-
-        html += `
-        <label class="option ${answers[currentQuestion]===index ? 'selected' : ''}">
-
-            <input
-                type="radio"
-                name="answer"
-                value="${index}"
-                ${answers[currentQuestion]===index ? "checked" : ""}>
-
-            ${option}
-
-        </label>
-        `;
+        card.classList.add("active");
 
     });
 
-    document.getElementById("options").innerHTML = html;
+});
 
-    // Click anywhere on option
-    document.querySelectorAll(".option").forEach(label=>{
+// ======================================
+// Notification Bell
+// ======================================
 
-        label.addEventListener("click",function(){
+const notify = document.querySelector(".notify");
 
-            document.querySelectorAll(".option").forEach(x=>{
-                x.classList.remove("selected");
-            });
+if (notify) {
 
-            this.classList.add("selected");
+    notify.addEventListener("click", () => {
 
-            this.querySelector("input").checked = true;
-
-            answers[currentQuestion] =
-            Number(this.querySelector("input").value);
-
-            loadPalette();
-
-        });
+        alert("No new notifications.");
 
     });
 
-    document.getElementById("nextBtn").innerHTML =
-    currentQuestion === questions.length-1
-    ? "Finish Test"
-    : "Next";
-
-    loadPalette();
-
 }
 
-// ---------------- Palette ----------------
+// ======================================
+// Profile
+// ======================================
 
-function loadPalette(){
+const profile = document.querySelector(".profile");
 
-    let html = "";
+if (profile) {
 
-    questions.forEach((q,index)=>{
+    profile.addEventListener("click", () => {
 
-        let cls = "palette-btn";
-
-        if(index===currentQuestion)
-            cls += " current";
-
-        if(answers[index]!==undefined)
-            cls += " answered";
-
-        html += `
-        <button
-        class="${cls}"
-        onclick="gotoQuestion(${index})">
-        ${index+1}
-        </button>
-        `;
+        alert("Profile section will be available soon.");
 
     });
 
-    document.getElementById("palette").innerHTML = html;
-
 }
 
-// ---------------- Jump Question ----------------
+// ======================================
+// Progress Bar Animation
+// ======================================
 
-function gotoQuestion(index){
+window.addEventListener("load", () => {
 
-    currentQuestion = index;
+    const progress = document.querySelector(".progress-fill");
 
-    showQuestion();
+    if (progress) {
 
-}
+        progress.style.width = "0%";
 
-// ---------------- Next ----------------
+        setTimeout(() => {
 
-function nextQuestion(){
+            progress.style.transition = "1.5s ease";
 
-    if(currentQuestion < questions.length-1){
+            progress.style.width = "72%";
 
-        currentQuestion++;
-
-        showQuestion();
-
-    }else{
-
-        localStorage.setItem(
-            "answers",
-            JSON.stringify(answers)
-        );
-
-        window.location.href="result.html";
+        }, 300);
 
     }
 
-}
-
-// ---------------- Previous ----------------
-
-function previousQuestion(){
-
-    if(currentQuestion>0){
-
-        currentQuestion--;
-
-        showQuestion();
-
-    }
-
-}
+});
