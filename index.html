@@ -3,89 +3,372 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JobSetu Telugu - Daily Mock Test</title>
+
+<title>JobSetu Telugu | One Platform for All Government Exams</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 <body>
 
-<div class="header">
+<div class="landing-page">
 
-    <img src="logo.png" class="small-logo">
-    <h1>JOBSETU TELUGU</h1>
+<!-- ================= HEADER ================= -->
 
-    <p>Daily Mock Test Series</p>
+<header class="header">
 
-</div>
+<div class="logo-section">
 
-<div class="login-card">
+<img src="logo.png" alt="JobSetu Telugu" class="logo">
 
-<h2>Welcome Back 👋</h2>
+<div>
 
-<p>Please login to continue</p>
+<h2 class="brand-title">
 
-<input
-type="text"
-id="name"
-placeholder="Enter Full Name">
+<span class="blue">JobSetu</span>
+<span class="red">Telugu</span>
 
-<input
-type="text"
-id="mobile"
-placeholder="Enter Mobile Number">
+</h2>
 
-<div class="test-box">
+<p class="tagline">
 
-<h3>📚 Today's Test</h3>
+One Platform for All Government Exams
 
-<p><b>Telangana & AP Daily Mock Test </b></p>
+</p>
 
 </div>
 
-<button onclick="startTest()">
+</div>
 
-🚀 START TEST
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="left-content">
+
+<span class="welcome">
+
+WELCOME TO
+
+</span>
+
+<h1>
+
+Prepare Today.<br>
+Achieve Tomorrow.
+
+</h1>
+
+<p>
+
+Practice daily mock tests, previous papers,
+subject-wise quizzes and performance analysis
+to improve your preparation for all Government
+Competitive Examinations.
+
+</p>
+
+<div class="feature-list">
+
+<div class="feature">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Daily Mock Tests
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Previous Papers
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Subject Wise Practice
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Performance Analysis
+
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button class="explore-btn">
+
+Explore Tests
 
 </button>
 
-<div class="features">
+<button class="guide-btn">
 
-<div>
+Exam Guide
 
-<h3>5000+</h3>
-
-<p>Students</p>
-
-</div>
-
-<div>
-
-<h3>100+</h3>
-
-<p>Mock Tests</p>
-
-</div>
-
-<div>
-
-<h3>1000+</h3>
-
-<p>Questions</p>
+</button>
 
 </div>
 
 </div>
 
+<!-- ================= LOGIN CARD ================= -->
+
+<div class="login-card">
+
+<div class="login-header">
+
+<h2>
+
+Sign In
+
+</h2>
+
+<p>
+
+Continue your preparation journey
+
+</p>
+
 </div>
 
-<footer>
+<form id="loginForm">
 
-© 2026 JobSetu Telugu
+<div class="input-box">
+
+<label>
+
+Username
+
+</label>
+
+<input
+type="text"
+placeholder="Enter Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Password
+
+</label>
+
+<input
+type="password"
+placeholder="Enter Password"
+required>
+
+</div>
+
+<div class="login-options">
+
+<label>
+
+<input type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="#">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<button
+type="submit"
+class="login-btn">
+
+Start Preparation
+
+</button>
+
+<div class="divider">
+
+OR
+
+</div>
+
+<button
+type="button"
+class="create-btn">
+
+Create New Account
+
+</button>
+
+</form>
+
+</div>
+<!-- ================= RIGHT ILLUSTRATION ================= -->
+
+<div class="hero-image">
+
+    <div class="circle-bg"></div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+         alt="Student"
+         class="student-img">
+
+    <div class="floating-card card1">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Daily Mock Tests</span>
+    </div>
+
+    <div class="floating-card card2">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Performance Analysis</span>
+    </div>
+
+    <div class="floating-card card3">
+        <i class="fa-solid fa-award"></i>
+        <span>Success Starts Here</span>
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        <h3>Daily Mock Tests</h3>
+
+        <p>
+            Practice with updated mock tests designed
+            for Government Competitive Examinations.
+        </p>
+
+    </div>
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-book"></i>
+
+        <h3>Previous Papers</h3>
+
+        <p>
+            Solve previous year papers to understand
+            the latest examination pattern.
+        </p>
+
+    </div>
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h3>Subject Wise Practice</h3>
+
+        <p>
+            Improve every subject with dedicated
+            quizzes and practice sessions.
+        </p>
+
+    </div>
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        <h3>Performance Analysis</h3>
+
+        <p>
+            Track your strengths and weaknesses
+            with detailed reports.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="statistics">
+
+    <div class="stat-card">
+
+        <h2>50K+</h2>
+
+        <p>Aspirants</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>1000+</h2>
+
+        <p>Mock Tests</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>95%</h2>
+
+        <p>Success Rate</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>24×7</h2>
+
+        <p>Platform Access</p>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 JobSetu Telugu. All Rights Reserved.
+
+    </p>
 
 </footer>
+
+</div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
+</section>
