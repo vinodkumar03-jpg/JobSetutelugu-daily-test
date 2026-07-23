@@ -777,3 +777,287 @@ width:95%;
 }
 
 }
+/*==========================================
+        EXAM PAGE RESPONSIVE DESIGN
+==========================================*/
+
+.footer-space{
+    height:40px;
+}
+
+/* Smooth Animations */
+
+.exam-card,
+.palette-card,
+.status-card{
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Option Hover */
+
+.option{
+
+    transition:.3s;
+
+}
+
+.option:hover{
+
+    transform:translateX(5px);
+
+}
+
+/* Palette Hover */
+
+.palette-btn{
+
+    transition:.3s;
+
+}
+
+.palette-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* Button Hover */
+
+#prevBtn,
+#nextBtn,
+#submitBtn{
+
+    transition:.3s;
+
+}
+
+#prevBtn:hover{
+
+    background:#d6d6d6;
+
+}
+
+#nextBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+#submitBtn:hover{
+
+    background:#15803d;
+
+}
+
+/* Timer Animation */
+
+.timer-box{
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+.exam-container{
+
+grid-template-columns:1fr;
+
+}
+
+.palette-panel{
+
+margin-top:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.exam-header{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+height:auto;
+
+}
+
+.exam-logo{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.exam-right{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.question-buttons{
+
+flex-direction:column;
+
+}
+
+#prevBtn,
+#nextBtn{
+
+width:100%;
+
+}
+
+.palette{
+
+grid-template-columns:repeat(5,1fr);
+
+}
+
+}
+
+@media(max-width:500px){
+
+.palette{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.question-card{
+
+padding:20px;
+
+}
+
+.question-card h3{
+
+font-size:18px;
+
+}
+
+.timer-box{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.candidate{
+
+display:none;
+
+}
+
+}
+
+/*==========================================
+        ACTIVE OPTION
+==========================================*/
+
+.option input[type="radio"]{
+
+margin-right:10px;
+
+transform:scale(1.2);
+
+cursor:pointer;
+
+}
+
+.option label{
+
+cursor:pointer;
+
+width:100%;
+
+display:block;
+
+}
+
+/*==========================================
+        SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#c2c19f;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#9f9e7b;
+
+}
+
+/*==========================================
+            END OF EXAM CSS
+==========================================*/
