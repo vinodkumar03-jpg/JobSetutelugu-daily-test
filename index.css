@@ -1,1 +1,365 @@
+/*=====================================================
+            JOBSETU TELUGU LANDING PAGE
+======================================================*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#faf8f3;
+    color:#222;
+}
+
+.landing-page{
+
+    width:100%;
+    min-height:100vh;
+}
+
+/*================ HEADER ================*/
+
+.header{
+
+    width:90%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 0;
+}
+
+.logo-section{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+
+    width:75px;
+    height:75px;
+    border-radius:50%;
+}
+
+.brand-title{
+
+    font-size:42px;
+    font-weight:800;
+}
+
+.blue{
+
+    color:#0d6efd;
+}
+
+.red{
+
+    color:#e11d48;
+}
+
+.tagline{
+
+    margin-top:5px;
+    color:#666;
+    font-size:16px;
+    font-weight:500;
+}
+
+/*================ HERO =================*/
+
+.hero{
+
+    width:90%;
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+/*================ LEFT SIDE ================*/
+
+.left-content .welcome{
+
+    color:#0d6efd;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+}
+
+.left-content h1{
+
+    margin-top:20px;
+
+    font-size:60px;
+
+    line-height:75px;
+
+    font-weight:800;
+}
+
+.left-content p{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    line-height:34px;
+
+    color:#666;
+}
+
+.feature-list{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+}
+
+.feature i{
+
+    color:#16a34a;
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    gap:20px;
+}
+
+.explore-btn{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    border:none;
+
+    padding:18px 40px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.explore-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#0b5ed7;
+}
+
+.guide-btn{
+
+    background:#fff;
+
+    border:2px solid #0d6efd;
+
+    color:#0d6efd;
+
+    padding:18px 40px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.guide-btn:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+}
+
+/*================ LOGIN CARD ================*/
+
+.login-card{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.login-header h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.login-header p{
+
+    color:#666;
+}
+
+.input-box{
+
+    margin-bottom:25px;
+}
+
+.input-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.input-box input:focus{
+
+    border-color:#0d6efd;
+}
+
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+}
+
+.login-options a{
+
+    color:#0d6efd;
+
+    text-decoration:none;
+}
+
+.login-btn{
+
+    width:100%;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+
+    background:#0b5ed7;
+}
+
+.divider{
+
+    margin:25px 0;
+
+    text-align:center;
+
+    color:#888;
+}
+
+.create-btn{
+
+    width:100%;
+
+    background:#fff;
+
+    border:2px solid #ddd;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.create-btn:hover{
+
+    background:#f4f4f4;
+}
