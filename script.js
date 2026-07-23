@@ -1,33 +1,28 @@
-function startTest() {
+document.addEventListener("DOMContentLoaded", () => {
 
-    let name = document.getElementById("name").value.trim();
-    let mobile = document.getElementById("mobile").value.trim();
+    const loginForm = document.getElementById("loginForm");
 
-    // Name Validation
-    if (name === "") {
-        alert("Please enter your name.");
-        return;
-    }
+    loginForm.addEventListener("submit", function (e) {
 
-    // Mobile Validation
-    if (mobile === "") {
-        alert("Please enter your mobile number.");
-        return;
-    }
+        e.preventDefault();
 
-    if (!/^[0-9]{10}$/.test(mobile)) {
-        alert("Please enter a valid 10-digit mobile number.");
-        return;
-    }
+        const username = document.querySelector('input[type="text"]').value.trim();
+        const password = document.querySelector('input[type="password"]').value.trim();
 
-    // Save Student Details
-    localStorage.setItem("studentName", name);
-    localStorage.setItem("mobile", mobile);
+        if (username === "" || password === "") {
 
-    // Reset Previous Test Data
-    localStorage.removeItem("answers");
-    localStorage.removeItem("testSubmitted");
+            alert("Please enter Username and Password");
 
-    // Open Test Page
-    window.location.href = "test.html";
-}
+            return;
+        }
+
+        // Save login status
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("username", username);
+
+        // Redirect to dashboard
+        window.location.href = "test.html";
+
+    });
+
+});
