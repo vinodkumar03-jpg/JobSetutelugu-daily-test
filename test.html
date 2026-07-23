@@ -1,115 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>JobSetu Telugu | Dashboard</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>JobSetu Telugu - Online Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="exam-header">
+<div class="page">
 
-    <div class="left">
+<header class="topbar">
 
-        <img src="logo.png" class="small-logo">
+<div class="logo-area">
 
-        <div>
+<img src="logo.png" class="logo">
 
-            <h2>JOBSETU TELUGU</h2>
+<div class="brand">
 
-            <p>Daily Mock Test Series</p>
+<h2>JobSetu Telugu</h2>
 
-        </div>
-
-    </div>
-
-    <div class="timer">
-
-        ⏱ <span id="timer">25:00</span>
-
-    </div>
+<p>AI Powered Government Exam Platform</p>
 
 </div>
 
-<div class="student-box">
+</div>
 
-    <h3>
-        Welcome,
-        <span id="studentName"></span>
-    </h3>
+<div class="header-right">
 
-    <p>Total Questions : <b id="totalQuestions">25</b></p>
+<div class="notify">
+
+<i class="fa-solid fa-bell"></i>
+
+</div>
+
+<div class="profile">
+
+<div class="profile-icon">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div class="profile-info">
+
+<h4>Vinod Kumar</h4>
+
+<p>Online</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="left-panel">
+
+<div class="welcome-card">
+
+<h1>Welcome Back 👋</h1>
+
+<p>
+
+Prepare smarter with AI-powered mock tests specially
+designed for Telangana Government Competitive
+Examinations.
+
+</p>
+
+</div>
+
+<div class="section-title">
+
+<h2>Government Exams</h2>
+
+</div>
+
+<div class="exam-grid">
+
+<div class="exam-card">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<span>TGPSC</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-tree"></i>
+
+<span>TGFBO</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<span>TG Police</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-bus"></i>
+
+<span>TSRTC</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<span>TSSPDCL</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-city"></i>
+
+<span>GHMC</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-hospital"></i>
+
+<span>DMHO</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-money-check-dollar"></i>
+
+<span>Bank</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-train"></i>
+
+<span>RRB</span>
+
+</div>
+
+<div class="exam-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>Postal</span>
+
+</div>
+
+</div>
+
+<div class="section-title">
+
+<h2>Subjects</h2>
+
+</div>
+
+<div class="subject-grid">
+
+<div class="subject-card">Mathematics</div>
+
+<div class="subject-card">Physics</div>
+
+<div class="subject-card">Chemistry</div>
+
+<div class="subject-card">Biology</div>
+
+<div class="subject-card">History</div>
+
+<div class="subject-card">Geography</div>
+
+<div class="subject-card">Economics</div>
+
+<div class="subject-card">Indian Polity</div>
+
+<div class="subject-card">Current Affairs</div>
+
+<div class="subject-card">Reasoning</div>
+
+<div class="subject-card">Science</div>
+
+<div class="subject-card">Telangana</div>
+
+</div>
+
+<div class="progress-box">
+
+<div class="progress-text">
+
+<span>Preparation Progress</span>
+
+<span>72%</span>
 
 </div>
 
 <div class="progress">
 
-    <div id="progressBar"></div>
+<div class="progress-fill"></div>
 
 </div>
 
-<div class="main-container">
+</div>
 
-<div class="question-section">
+</div>
 
-<h2 id="questionNumber">
+<div class="right-panel">
 
-Question 1
+<div class="test-card">
+
+<div class="badge">
+
+General Studies
+
+</div>
+
+<h2>
+
+General Studies Test - 01
 
 </h2>
 
-<h3 id="questionText">
+<p>
 
-Loading Question...
+Complete the examination within the allotted time.
 
-</h3>
+Read every question carefully before submitting.
 
-<div id="options">
+</p>
 
-</div>
+<ul>
 
-<div class="buttons">
+<li>✔ 100 Questions</li>
 
-<button onclick="previousQuestion()">
+<li>✔ 100 Marks</li>
 
-◀ Previous
+<li>✔ 90 Minutes</li>
+
+<li>✔ No Negative Marking</li>
+
+</ul>
+
+<button id="startBtn">
+
+Start Test
 
 </button>
 
-<button onclick="nextQuestion()">
+</div>
 
-Next ▶
+<div class="overview-card">
 
-</button>
+<h2>
+
+Test Overview
+
+</h2>
+
+<div class="overview-item">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<div>
+
+<h4>Total Questions</h4>
+
+<p>100</p>
 
 </div>
 
 </div>
 
-<div class="palette">
+<div class="overview-item">
 
-<h3>
+<i class="fa-solid fa-clock"></i>
 
-Questions
+<div>
 
-</h3>
+<h4>Duration</h4>
 
-<div id="paletteButtons">
-
-</div>
+<p>90 Minutes</p>
 
 </div>
 
 </div>
 
-<script src="test.js"></script>
+<div class="overview-item">
 
-</body>
-</html>
+<i class="fa-solid fa-award"></i>
+
+<div>
+
+<h4>Total Marks</h4>
+
+<p>100 Marks</p>
+
+</div>
+
+</div>
+
+<div class="overview-item">
+
+<i class="fa-solid fa-robot"></i>
+
+<div>
+
+<h4>AI Analysis</h4>
+
+<p>
+
+Performance Report Available
+
+</p>
+
+</div>
+
+</div>
