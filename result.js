@@ -94,7 +94,7 @@ dashboardBtn.addEventListener("click", () => {
 // -----------------------------
 reviewBtn.addEventListener("click", () => {
 
-    alert("Review Answers module will be added in the next update.");
+    window.location.href = "review.html";
 
 });
 
