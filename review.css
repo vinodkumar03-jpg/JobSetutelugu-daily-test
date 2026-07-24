@@ -1,0 +1,314 @@
+/* ==========================================
+   JobSetu Telugu - Review Page
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#F8F5EC;
+
+    padding:30px;
+
+    color:#333;
+
+}
+
+.review-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.review-header{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+.review-header h1{
+
+    color:#8A7531;
+
+    text-align:center;
+
+}
+
+.review-header h2{
+
+    color:#1565C0;
+
+    text-align:center;
+
+    margin:10px 0 30px;
+
+}
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.summary-card{
+
+    background:#fff;
+
+    border:2px solid #E7DCC5;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    padding:20px;
+
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+
+}
+
+.summary-card h3{
+
+    color:#666;
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+}
+
+.summary-card p{
+
+    font-size:28px;
+
+    color:#1565C0;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   Question Card
+=============================== */
+
+.question-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.question-card h3{
+
+    color:#8A7531;
+
+    margin-bottom:15px;
+
+}
+
+.option{
+
+    display:block;
+
+    margin:12px 0;
+
+    padding:12px 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    background:#fafafa;
+
+}
+
+/* Correct Answer */
+
+.correct{
+
+    background:#E8F5E9;
+
+    border:2px solid #2E7D32;
+
+    color:#2E7D32;
+
+    font-weight:bold;
+
+}
+
+/* Wrong Selected Answer */
+
+.wrong{
+
+    background:#FFEBEE;
+
+    border:2px solid #D32F2F;
+
+    color:#D32F2F;
+
+    font-weight:bold;
+
+}
+
+/* User Selected Correct */
+
+.selected{
+
+    background:#E3F2FD;
+
+    border:2px solid #1565C0;
+
+    color:#1565C0;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   Status Badge
+=============================== */
+
+.status{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+.status.correct{
+
+    background:#2E7D32;
+
+    color:#fff;
+
+}
+
+.status.wrong{
+
+    background:#D32F2F;
+
+    color:#fff;
+
+}
+
+.status.notattempted{
+
+    background:#9E9E9E;
+
+    color:#fff;
+
+}
+
+/* ===============================
+   Bottom Button
+=============================== */
+
+.bottom-buttons{
+
+    text-align:center;
+
+    margin:40px 0;
+
+}
+
+.bottom-buttons button{
+
+    padding:15px 35px;
+
+    background:#1565C0;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.bottom-buttons button:hover{
+
+    background:#0D47A1;
+
+}
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media(max-width:768px){
+
+.summary{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.summary{
+
+grid-template-columns:1fr;
+
+}
+
+.review-header{
+
+padding:20px;
+
+}
+
+.question-card{
+
+padding:20px;
+
+}
+
+}
