@@ -517,13 +517,24 @@ function submitExam() {
 
     };
 
-    localStorage.setItem(
-        "examResult",
-        JSON.stringify(result)
-    );
+   // Save Latest Result
+localStorage.setItem(
+    "examResult",
+    JSON.stringify(result)
+);
 
-    localStorage.removeItem("currentExam");
+// Save History
+let history = JSON.parse(localStorage.getItem("examHistory")) || [];
 
-    window.location.href = "result.html";
+history.push(result);
 
-}
+localStorage.setItem(
+    "examHistory",
+    JSON.stringify(history)
+);
+
+// Remove Current Exam
+localStorage.removeItem("currentExam");
+
+// Redirect
+window.location.href = "result.html";
