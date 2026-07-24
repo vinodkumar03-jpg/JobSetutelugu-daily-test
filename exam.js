@@ -1,208 +1,196 @@
-// =========================================
-// JobSetu Telugu - Exam Engine (Part 1)
-// =========================================
+// ===========================================
+// JobSetu Telugu - Online Exam Engine
+// Part 1 : Initialization & Loading
+// ===========================================
 
-// Sample Questions
-// Later we will load these from JSON
+// -----------------------------
+// Configuration
+// -----------------------------
+const EXAM_DURATION = 90 * 60; // 90 Minutes
 
-const questions = [
+// -----------------------------
+// Global Variables
+// -----------------------------
+let questions = [];
+let currentQuestion = 0;
+let timeLeft = EXAM_DURATION;
 
-{
-    id:1,
-    question:"Which Article guarantees Equality before Law?",
-    options:[
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
-    ],
-    answer:0
-},
+let userAnswers = [];
+let questionStatus = [];
 
-{
-    id:2,
-    question:"Who is known as the Father of the Indian Constitution?",
-    options:[
-        "Mahatma Gandhi",
-        "Dr. B.R. Ambedkar",
-        "Jawaharlal Nehru",
-        "Rajendra Prasad"
-    ],
-    answer:1
-},
+// -----------------------------
+// HTML Elements
+// -----------------------------
+const timer = document.getElementById("timer");
+const candidateName = document.getElementById("candidateName");
 
-{
-    id:3,
-    question:"Capital of Telangana?",
-    options:[
-        "Warangal",
-        "Karimnagar",
-        "Hyderabad",
-        "Nizamabad"
-    ],
-    answer:2
-},
+const progressText = document.getElementById("progressText");
+const progressFill = document.getElementById("progressFill");
 
-{
-    id:4,
-    question:"Largest district in Telangana by area?",
-    options:[
-        "Nalgonda",
-        "Bhadradri",
-        "Mulugu",
-        "Adilabad"
-    ],
-    answer:2
-},
+const questionNumber = document.getElementById("questionNumber");
+const questionText = document.getElementById("questionText");
 
-{
-    id:5,
-    question:"How many Fundamental Rights are there?",
-    options:[
-        "5",
-        "6",
-        "7",
-        "8"
-    ],
-    answer:1
+const optionsContainer = document.getElementById("optionsContainer");
+
+const palette = document.getElementById("palette");
+
+const prevBtn = document.getElementById("prevBtn");
+const clearBtn = document.getElementById("clearBtn");
+const reviewBtn = document.getElementById("reviewBtn");
+const saveNextBtn = document.getElementById("saveNextBtn");
+const submitBtn = document.getElementById("submitBtn");
+
+// -----------------------------
+// Candidate Details
+// -----------------------------
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (user && candidateName) {
+    candidateName.textContent = user.name;
+} else if (candidateName) {
+    candidateName.textContent = "Candidate";
 }
 
-];
+// -----------------------------
+// Load Questions
+// -----------------------------
+async function loadQuestions() {
 
-// ===============================
+    try {
 
-let currentQuestion = 0;
+        const response = await fetch("data/tgpsc/mock1.json");
 
-let userAnswers = new Array(questions.length).fill(null);
-// Question Status
-// not-visited
-// not-answered
-// answered
-// review
+        questions = await response.json();
 
-let questionStatus = new Array(questions.length).fill("not-visited");
+        userAnswers = new Array(questions.length).fill(null);
 
-// First question is already visited
-questionStatus[0] = "not-answered";
-let reviewQuestions = [];
+        questionStatus = new Array(questions.length).fill("not-visited");
 
-let timeLeft = 90 * 60;
+        questionStatus[0] = "not-answered";
 
-// ===============================
-// HTML Elements
-// ===============================
+        createPalette();
 
-const questionNumber =
-document.getElementById("questionNumber");
+        displayQuestion(0);
 
-const questionText =
-document.getElementById("questionText");
+        updateProgress();
 
-const optionsContainer =
-document.getElementById("optionsContainer");
+        restoreExam();
 
-const palette =
-document.getElementById("palette");
+        startTimer();
 
-const timer =
-document.getElementById("timer");
+    } catch (error) {
 
-const prevBtn =
-document.getElementById("prevBtn");
+        console.error(error);
 
-const saveNextBtn =
-document.getElementById("saveNextBtn");
+        alert("Unable to load questions.");
 
-// ===================================
+    }
+
+}
+
+// -----------------------------
+// Start Exam
+// -----------------------------
+window.onload = () => {
+
+    loadQuestions();
+
+};
+// ===========================================
+// Part 2 : Display Questions & Navigation
+// ===========================================
+
+// -----------------------------
 // Display Question
-// ===================================
+// -----------------------------
+function displayQuestion(index) {
 
-function displayQuestion(index){
+    currentQuestion = index;
 
-const q = questions[index];
+    const q = questions[index];
 
-questionNumber.innerHTML =
-`Question ${index+1} of ${questions.length}`;
+    questionNumber.textContent =
+        `Question ${index + 1} of ${questions.length}`;
 
-questionText.innerHTML =
-q.question;
+    questionText.textContent = q.question;
 
-optionsContainer.innerHTML="";
+    optionsContainer.innerHTML = "";
 
-q.options.forEach((option,i)=>{
+    q.options.forEach((option, i) => {
 
-const checked =
-userAnswers[index]===i ? "checked":"";
+        const label = document.createElement("label");
 
-optionsContainer.innerHTML +=
+        label.className = "option";
 
-`
-<label class="option">
+        const input = document.createElement("input");
 
-<input
-type="radio"
-name="option"
-value="${i}"
-${checked}
->
+        input.type = "radio";
+        input.name = "option";
+        input.value = i;
 
-${option}
+        if (userAnswers[index] === i) {
+            input.checked = true;
+        }
 
-</label>
+        input.addEventListener("change", () => {
 
-`;
+            userAnswers[index] = i;
 
-});
+            questionStatus[index] = "answered";
 
-document
-.querySelectorAll("input[name='option']")
-.forEach(radio=>{
+            updatePalette();
 
-radio.addEventListener("change", (e) => {
+        });
 
-    userAnswers[index] = parseInt(e.target.value);
+        const span = document.createElement("span");
 
-    questionStatus[index] = "answered";
+        span.textContent = option;
+
+        label.appendChild(input);
+        label.appendChild(span);
+
+        optionsContainer.appendChild(label);
+
+    });
 
     updatePalette();
 
-});
-displayQuestion(currentQuestion);
+}
 
-// ===================================
-// Question Palette
-// ===================================
+// -----------------------------
+// Create Question Palette
+// -----------------------------
+function createPalette() {
 
-function createPalette(){
+    palette.innerHTML = "";
 
-palette.innerHTML="";
+    questions.forEach((q, index) => {
 
-questions.forEach((q,index)=>{
+        const button = document.createElement("button");
 
-const btn=document.createElement("button");
+        button.textContent = index + 1;
 
-btn.innerText=index+1;
+        button.addEventListener("click", () => {
 
-btn.onclick=()=>{
+            currentQuestion = index;
 
-currentQuestion=index;
+            if (questionStatus[index] === "not-visited") {
+                questionStatus[index] = "not-answered";
+            }
 
-displayQuestion(currentQuestion);
+            displayQuestion(index);
 
-};
+        });
 
-palette.appendChild(btn);
+        palette.appendChild(button);
 
-});
+    });
 
 }
 
-createPalette();
-
-// ===================================
-// Update Palette Colors
-// ===================================
-
+// -----------------------------
+// Update Palette
+// -----------------------------
 function updatePalette() {
 
     const buttons = palette.querySelectorAll("button");
@@ -211,19 +199,27 @@ function updatePalette() {
 
         button.className = "";
 
-        switch (questionStatus[index]) {
+        if (questionStatus[index] === "answered") {
 
-            case "answered":
-                button.classList.add("answered");
-                break;
+            button.classList.add("answered");
 
-            case "review":
-                button.classList.add("review");
-                break;
+        }
 
-            case "not-answered":
-                button.classList.add("notanswered");
-                break;
+        else if (questionStatus[index] === "review") {
+
+            button.classList.add("review");
+
+        }
+
+        else if (questionStatus[index] === "not-answered") {
+
+            button.classList.add("notanswered");
+
+        }
+
+        else {
+
+            button.classList.add("notvisited");
 
         }
 
@@ -241,35 +237,31 @@ function updatePalette() {
 
 }
 
-// ===================================
+// -----------------------------
 // Previous Button
-// ===================================
+// -----------------------------
+prevBtn.addEventListener("click", () => {
 
-prevBtn.addEventListener("click",()=>{
+    if (currentQuestion > 0) {
 
-if(currentQuestion>0){
+        currentQuestion--;
 
-currentQuestion--;
-
-displayQuestion(currentQuestion);
-
-}
-
-});
-
-// ===================================
-// Next Button
-// ===================================
-
-saveNextBtn.addEventListener("click", () => {
-
-    if (userAnswers[currentQuestion] == null) {
-
-        questionStatus[currentQuestion] = "not-answered";
+        displayQuestion(currentQuestion);
 
     }
 
-    else {
+});
+
+// -----------------------------
+// Save & Next Button
+// -----------------------------
+saveNextBtn.addEventListener("click", () => {
+
+    if (userAnswers[currentQuestion] === null) {
+
+        questionStatus[currentQuestion] = "not-answered";
+
+    } else {
 
         questionStatus[currentQuestion] = "answered";
 
@@ -290,55 +282,249 @@ saveNextBtn.addEventListener("click", () => {
     }
 
 });
+// ===========================================
+// Part 3 : Review, Clear, Progress & Auto Save
+// ===========================================
 
-// ===================================
-// Timer
-// ===================================
+// -----------------------------
+// Mark for Review
+// -----------------------------
+reviewBtn.addEventListener("click", () => {
 
-function startTimer(){
+    questionStatus[currentQuestion] = "review";
 
-const interval=setInterval(()=>{
+    if (currentQuestion < questions.length - 1) {
 
-let minutes=Math.floor(timeLeft/60);
+        currentQuestion++;
 
-let seconds=timeLeft%60;
+        if (questionStatus[currentQuestion] === "not-visited") {
 
-timer.innerHTML=
+            questionStatus[currentQuestion] = "not-answered";
 
-`${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+        }
 
-timeLeft--;
+        displayQuestion(currentQuestion);
 
-if(timeLeft<0){
+    } else {
 
-clearInterval(interval);
+        updatePalette();
 
-alert("Time Up!");
+    }
 
-submitExam();
+});
+
+// -----------------------------
+// Clear Response
+// -----------------------------
+clearBtn.addEventListener("click", () => {
+
+    userAnswers[currentQuestion] = null;
+
+    questionStatus[currentQuestion] = "not-answered";
+
+    displayQuestion(currentQuestion);
+
+});
+
+// -----------------------------
+// Update Progress Bar
+// -----------------------------
+function updateProgress() {
+
+    const answered = questionStatus.filter(
+        status => status === "answered"
+    ).length;
+
+    progressText.textContent =
+        `${answered} / ${questions.length} Answered`;
+
+    const percentage =
+        (answered / questions.length) * 100;
+
+    progressFill.style.width = percentage + "%";
 
 }
 
-},1000);
+// -----------------------------
+// Save Exam to LocalStorage
+// -----------------------------
+function saveExam() {
+
+    const examData = {
+
+        answers: userAnswers,
+
+        status: questionStatus,
+
+        currentQuestion: currentQuestion,
+
+        timeLeft: timeLeft
+
+    };
+
+    localStorage.setItem(
+        "currentExam",
+        JSON.stringify(examData)
+    );
 
 }
 
-startTimer();
+// -----------------------------
+// Restore Exam
+// -----------------------------
+function restoreExam() {
 
-// ===================================
-// Dummy Submit
-// ===================================
+    const saved =
+        localStorage.getItem("currentExam");
 
-function submitExam(){
+    if (!saved) return;
 
-localStorage.setItem(
+    const examData = JSON.parse(saved);
 
-"userAnswers",
+    userAnswers =
+        examData.answers || userAnswers;
 
-JSON.stringify(userAnswers)
+    questionStatus =
+        examData.status || questionStatus;
 
-);
+    currentQuestion =
+        examData.currentQuestion || 0;
 
-window.location.href="result.html";
+    timeLeft =
+        examData.timeLeft || EXAM_DURATION;
+
+    displayQuestion(currentQuestion);
 
 }
+
+// -----------------------------
+// Save Automatically
+// -----------------------------
+setInterval(() => {
+
+    saveExam();
+
+}, 5000);
+// ===========================================
+// Part 4 : Timer, Submit & Result
+// ===========================================
+
+// -----------------------------
+// Start Timer
+// -----------------------------
+function startTimer() {
+
+    const interval = setInterval(() => {
+
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        timer.textContent =
+            `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+        if (timeLeft <= 0) {
+
+            clearInterval(interval);
+
+            alert("Time is over! Your test will be submitted.");
+
+            submitExam();
+
+            return;
+        }
+
+        timeLeft--;
+
+        saveExam();
+
+    }, 1000);
+
+}
+
+// -----------------------------
+// Submit Button
+// -----------------------------
+submitBtn.addEventListener("click", () => {
+
+    const confirmSubmit = confirm(
+        "Are you sure you want to submit the exam?"
+    );
+
+    if (confirmSubmit) {
+
+        submitExam();
+
+    }
+
+});
+
+// -----------------------------
+// Submit Exam
+// -----------------------------
+function submitExam() {
+
+    let correct = 0;
+    let wrong = 0;
+    let attempted = 0;
+
+    questions.forEach((question, index) => {
+
+        if (userAnswers[index] !== null) {
+
+            attempted++;
+
+            if (userAnswers[index] === question.answer) {
+
+                correct++;
+
+            } else {
+
+                wrong++;
+
+            }
+
+        }
+
+    });
+
+    const notAttempted = questions.length - attempted;
+
+    const percentage =
+        ((correct / questions.length) * 100).toFixed(2);
+
+    const result = {
+
+        candidate: candidateName.textContent,
+
+        totalQuestions: questions.length,
+
+        attempted: attempted,
+
+        notAttempted: notAttempted,
+
+        correct: correct,
+
+        wrong: wrong,
+
+        marks: correct,
+
+        percentage: percentage,
+
+        submittedAt: new Date().toLocaleString()
+
+    };
+
+    localStorage.setItem(
+        "examResult",
+        JSON.stringify(result)
+    );
+
+    localStorage.removeItem("currentExam");
+
+    window.location.href = "result.html";
+
+}
+
+// ===========================================
+// End of exam.js
+// ===========================================
