@@ -1,215 +1,326 @@
-// ===============================
-// JobSetu Telugu Exam System
+// =========================================
+// JobSetu Telugu - Exam Engine (Part 1)
+// =========================================
+
+// Sample Questions
+// Later we will load these from JSON
+
+const questions = [
+
+{
+    id:1,
+    question:"Which Article guarantees Equality before Law?",
+    options:[
+        "Article 14",
+        "Article 19",
+        "Article 21",
+        "Article 32"
+    ],
+    answer:0
+},
+
+{
+    id:2,
+    question:"Who is known as the Father of the Indian Constitution?",
+    options:[
+        "Mahatma Gandhi",
+        "Dr. B.R. Ambedkar",
+        "Jawaharlal Nehru",
+        "Rajendra Prasad"
+    ],
+    answer:1
+},
+
+{
+    id:3,
+    question:"Capital of Telangana?",
+    options:[
+        "Warangal",
+        "Karimnagar",
+        "Hyderabad",
+        "Nizamabad"
+    ],
+    answer:2
+},
+
+{
+    id:4,
+    question:"Largest district in Telangana by area?",
+    options:[
+        "Nalgonda",
+        "Bhadradri",
+        "Mulugu",
+        "Adilabad"
+    ],
+    answer:2
+},
+
+{
+    id:5,
+    question:"How many Fundamental Rights are there?",
+    options:[
+        "5",
+        "6",
+        "7",
+        "8"
+    ],
+    answer:1
+}
+
+];
+
 // ===============================
 
-let questions = [];
 let currentQuestion = 0;
-let answers = [];
-let timer = 25 * 60;
 
-// Elements
+let userAnswers = new Array(questions.length).fill(null);
+// Question Status
+// not-visited
+// not-answered
+// answered
+// review
 
-const questionText = document.getElementById("questionText");
-const optionsDiv = document.getElementById("options");
-const questionNo = document.getElementById("questionNo");
-const palette = document.getElementById("palette");
-const timerDisplay = document.getElementById("timer");
+let questionStatus = new Array(questions.length).fill("not-visited");
 
+// First question is already visited
+questionStatus[0] = "not-answered";
+let reviewQuestions = [];
+
+let timeLeft = 90 * 60;
 
 // ===============================
-// Load Questions
+// HTML Elements
 // ===============================
 
-fetch("questions.json")
-    .then(response => response.json())
-    .then(data => {
+const questionNumber =
+document.getElementById("questionNumber");
 
-        questions = data;
+const questionText =
+document.getElementById("questionText");
 
-        if (!questions.length) {
-            alert("No questions found.");
-            return;
-        }
+const optionsContainer =
+document.getElementById("optionsContainer");
 
-        answers = new Array(questions.length).fill(null);
+const palette =
+document.getElementById("palette");
 
-        createPalette();
-        loadQuestion();
-        startTimer();
+const timer =
+document.getElementById("timer");
 
-    })
-    .catch(error => {
+const prevBtn =
+document.getElementById("prevBtn");
 
-        console.error(error);
-        alert("Unable to load questions.json");
+const nextBtn =
+document.getElementById("nextBtn");
 
-    });
-// ======================================
-// Previous Button
-// ======================================
+// ===================================
+// Display Question
+// ===================================
 
-document.getElementById("prevBtn").addEventListener("click", () => {
+function displayQuestion(index){
 
-    if (currentQuestion > 0) {
+const q = questions[index];
 
-        currentQuestion--;
+questionNumber.innerHTML =
+`Question ${index+1} of ${questions.length}`;
 
-        loadQuestion();
+questionText.innerHTML =
+q.question;
 
-    }
+optionsContainer.innerHTML="";
+
+q.options.forEach((option,i)=>{
+
+const checked =
+userAnswers[index]===i ? "checked":"";
+
+optionsContainer.innerHTML +=
+
+`
+<label class="option">
+
+<input
+type="radio"
+name="option"
+value="${i}"
+${checked}
+>
+
+${option}
+
+</label>
+
+`;
 
 });
 
-// ======================================
-// Next Button
-// ======================================
+document
+.querySelectorAll("input[name='option']")
+.forEach(radio=>{
 
-document.getElementById("nextBtn").addEventListener("click", () => {
+radio.addEventListener("change", (e) => {
 
-    if (currentQuestion < questions.length - 1) {
+    userAnswers[index] = parseInt(e.target.value);
 
-        currentQuestion++;
-
-        loadQuestion();
-
-    }
-
-});
-
-// ======================================
-// Create Question Palette
-// ======================================
-
-function createPalette() {
-
-    palette.innerHTML = "";
-
-    for (let i = 0; i < questions.length; i++) {
-
-        const btn = document.createElement("button");
-
-        btn.innerText = i + 1;
-
-        btn.className = "palette-btn";
-
-        btn.onclick = function () {
-
-            currentQuestion = i;
-
-            loadQuestion();
-
-        };
-
-        palette.appendChild(btn);
-
-    }
+    questionStatus[index] = "answered";
 
     updatePalette();
 
+});
+displayQuestion(currentQuestion);
+
+// ===================================
+// Question Palette
+// ===================================
+
+function createPalette(){
+
+palette.innerHTML="";
+
+questions.forEach((q,index)=>{
+
+const btn=document.createElement("button");
+
+btn.innerText=index+1;
+
+btn.onclick=()=>{
+
+currentQuestion=index;
+
+displayQuestion(currentQuestion);
+
+};
+
+palette.appendChild(btn);
+
+});
+
 }
 
-// ======================================
-// Update Palette
-// ======================================
+createPalette();
+
+// ===================================
+// Update Palette Colors
+// ===================================
 
 function updatePalette() {
 
-    const buttons = document.querySelectorAll(".palette-btn");
+    const buttons = palette.querySelectorAll("button");
 
-    buttons.forEach((btn, index) => {
+    buttons.forEach((button, index) => {
 
-        btn.classList.remove("answered");
-        btn.classList.remove("current");
+        button.className = "";
 
-        if (answers[index] !== null) {
+        switch (questionStatus[index]) {
 
-            btn.classList.add("answered");
+            case "answered":
+                button.classList.add("answered");
+                break;
+
+            case "review":
+                button.classList.add("review");
+                break;
+
+            case "not-answered":
+                button.classList.add("notanswered");
+                break;
+
+        }
+
+        if (index === currentQuestion) {
+
+            button.classList.add("current");
 
         }
 
     });
 
-    if (buttons[currentQuestion]) {
+    updateProgress();
 
-        buttons[currentQuestion].classList.add("current");
-
-    }
+    saveExam();
 
 }
 
-// ======================================
+// ===================================
+// Previous Button
+// ===================================
+
+prevBtn.addEventListener("click",()=>{
+
+if(currentQuestion>0){
+
+currentQuestion--;
+
+displayQuestion(currentQuestion);
+
+}
+
+});
+
+// ===================================
+// Next Button
+// ===================================
+
+nextBtn.addEventListener("click",()=>{
+
+if(currentQuestion<questions.length-1){
+
+currentQuestion++;
+
+displayQuestion(currentQuestion);
+
+}
+
+});
+
+// ===================================
 // Timer
-// ======================================
+// ===================================
 
-function startTimer() {
+function startTimer(){
 
-    const interval = setInterval(() => {
+const interval=setInterval(()=>{
 
-        const minutes = Math.floor(timer / 60);
+let minutes=Math.floor(timeLeft/60);
 
-        const seconds = timer % 60;
+let seconds=timeLeft%60;
 
-        timerDisplay.innerHTML =
-            String(minutes).padStart(2, "0") +
-            ":" +
-            String(seconds).padStart(2, "0");
+timer.innerHTML=
 
-        timer--;
+`${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
 
-        if (timer < 0) {
+timeLeft--;
 
-            clearInterval(interval);
+if(timeLeft<0){
 
-            alert("Time is Up!");
+clearInterval(interval);
 
-            submitExam();
+alert("Time Up!");
 
-        }
+submitExam();
 
-    }, 1000);
+}
+
+},1000);
 
 }
 
 startTimer();
 
-// ======================================
-// Submit Button
-// ======================================
+// ===================================
+// Dummy Submit
+// ===================================
 
-document.getElementById("submitBtn").addEventListener("click", () => {
+function submitExam(){
 
-    if (confirm("Are you sure you want to submit the test?")) {
+localStorage.setItem(
 
-        submitExam();
+"userAnswers",
 
-    }
+JSON.stringify(userAnswers)
 
-});
+);
 
-// ======================================
-// Submit Exam
-// ======================================
-
-function submitExam() {
-
-    let score = 0;
-
-    questions.forEach((q, index) => {
-
-        if (answers[index] === q.answer) {
-
-            score++;
-
-        }
-
-    });
-
-    localStorage.setItem("score", score);
-
-    localStorage.setItem("totalQuestions", questions.length);
-
-    localStorage.setItem("answers", JSON.stringify(answers));
-
-    window.location.href = "result.html";
+window.location.href="result.html";
 
 }
