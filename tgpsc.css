@@ -1,1 +1,421 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F8F5EC;
+    color:#2D2D2D;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    width:100%;
+
+    background:#F8F5EC;
+
+    border-bottom:1px solid #E7DCC5;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 45px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo img{
+
+    width:55px;
+
+    height:55px;
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#8A7531;
+}
+
+.logo span{
+
+    color:#1565C0;
+}
+
+.logo p{
+
+    font-size:13px;
+
+    color:#666;
+}
+
+/* ===========================
+HEADER RIGHT
+=========================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.search-box{
+
+    width:320px;
+
+    background:white;
+
+    border:1px solid #E7DCC5;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:12px 18px;
+}
+
+.search-box i{
+
+    color:#888;
+
+    margin-right:12px;
+}
+
+.search-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:100%;
+
+    background:none;
+
+    font-size:15px;
+}
+
+/* ===========================
+ ICON BUTTON
+=========================== */
+
+.icon-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    border:1px solid #E7DCC5;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.icon-btn:hover{
+
+    background:#1565C0;
+
+    color:white;
+}
+
+/* ===========================
+ PROFILE
+=========================== */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+}
+
+.profile i{
+
+    font-size:35px;
+
+    color:#8A7531;
+}
+
+.profile span{
+
+    font-weight:600;
+}
+
+/* ===========================
+ MAIN CONTAINER
+=========================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:35px 0;
+}
+
+/* ===========================
+ BREADCRUMB
+=========================== */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+}
+
+.breadcrumb a{
+
+    text-decoration:none;
+
+    color:#1565C0;
+}
+
+.breadcrumb strong{
+
+    color:#8A7531;
+}
+
+/* ===========================
+ HERO
+=========================== */
+
+.hero{
+
+    background:white;
+
+    border:1px solid #E7DCC5;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.hero-left h1{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    color:#8A7531;
+}
+
+.hero-left p{
+
+    color:#666;
+
+    max-width:600px;
+
+    line-height:1.8;
+}
+
+/* ===========================
+ STATS
+=========================== */
+
+.hero-right{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.stat{
+
+    width:130px;
+
+    height:120px;
+
+    background:#FCFAF5;
+
+    border:1px solid #E7DCC5;
+
+    border-radius:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+}
+
+.stat:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.08);
+}
+
+.stat h2{
+
+    color:#8A7531;
+
+    font-size:32px;
+}
+
+.stat p{
+
+    margin-top:8px;
+
+    color:#777;
+}
+
+/* ===========================
+ FILTERS
+=========================== */
+
+.filters{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.filters button{
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    background:white;
+
+    border:1px solid #E7DCC5;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+}
+
+.filters button:hover{
+
+    background:#1565C0;
+
+    color:white;
+}
+
+.filters .active{
+
+    background:#1565C0;
+
+    color:white;
+}
+
+/* ===========================
+ TOOLBAR
+=========================== */
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+}
+
+.toolbar input{
+
+    width:330px;
+
+    padding:13px 18px;
+
+    border-radius:10px;
+
+    border:1px solid #E7DCC5;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:white;
+}
+
+.toolbar select{
+
+    width:180px;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    border:1px solid #E7DCC5;
+
+    background:white;
+
+    cursor:pointer;
+}
