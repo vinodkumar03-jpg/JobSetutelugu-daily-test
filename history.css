@@ -1,0 +1,99 @@
+/* ==========================================
+   JobSetu Telugu - Test History
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F8F5EC;
+    padding:30px;
+}
+
+.history-container{
+    max-width:1200px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#8A7531;
+    margin-bottom:25px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#1565C0;
+    color:#fff;
+}
+
+th,td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:hover{
+    background:#f8f8f8;
+}
+
+.pass{
+    color:#2E7D32;
+    font-weight:bold;
+}
+
+.fail{
+    color:#D32F2F;
+    font-weight:bold;
+}
+
+.review-btn{
+    background:#1565C0;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.review-btn:hover{
+    background:#0D47A1;
+}
+
+#dashboardBtn{
+    margin-top:25px;
+    padding:12px 30px;
+    background:#8A7531;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#dashboardBtn:hover{
+    background:#6E5D27;
+}
+
+@media(max-width:768px){
+
+.history-container{
+    overflow-x:auto;
+}
+
+table{
+    min-width:800px;
+}
+
+}
