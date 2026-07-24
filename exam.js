@@ -474,13 +474,9 @@ function submitExam() {
             attempted++;
 
             if (userAnswers[index] === question.answer) {
-
                 correct++;
-
             } else {
-
                 wrong++;
-
             }
 
         }
@@ -489,12 +485,21 @@ function submitExam() {
 
     const notAttempted = questions.length - attempted;
 
-    const percentage =
-        ((correct / questions.length) * 100).toFixed(2);
+    const percentage = (
+        (correct / questions.length) * 100
+    ).toFixed(2);
 
     const result = {
 
         candidate: candidateName.textContent,
+
+        submittedAt: new Date().toLocaleString(),
+
+        questions: questions,
+
+        userAnswers: userAnswers,
+
+        questionStatus: questionStatus,
 
         totalQuestions: questions.length,
 
@@ -508,9 +513,7 @@ function submitExam() {
 
         marks: correct,
 
-        percentage: percentage,
-
-        submittedAt: new Date().toLocaleString()
+        percentage: percentage
 
     };
 
@@ -524,7 +527,3 @@ function submitExam() {
     window.location.href = "result.html";
 
 }
-
-// ===========================================
-// End of exam.js
-// ===========================================
