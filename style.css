@@ -1284,3 +1284,98 @@ background:#9f9e7b;
 .box.notvisited{
     background:#d1d5db;
 }
+.student-panel{
+
+    margin-top:25px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.student-panel h2{
+
+    margin-bottom:20px;
+
+    color:#8A7531;
+
+}
+
+.student-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.student-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.student-item i{
+
+    font-size:22px;
+
+    color:#1565C0;
+
+    width:40px;
+
+}
+
+.student-item div{
+
+    flex:1;
+
+    margin-left:15px;
+
+}
+
+.student-item h4{
+
+    margin-bottom:5px;
+
+}
+
+.student-item p{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.student-item button{
+
+    background:#1565C0;
+
+    color:#fff;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.student-item button:hover{
+
+    background:#0D47A1;
+
+}
