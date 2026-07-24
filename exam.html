@@ -2,203 +2,240 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobSetu Telugu | Online Exam</title>
 
-<meta charset="UTF-8">
+    <link rel="stylesheet" href="exam.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<title>JobSetu Telugu | Online Exam</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="exam-page">
+<div class="exam-wrapper">
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
 
-<header class="exam-header">
+    <header class="exam-header">
 
-<div class="exam-logo">
+        <div class="logo-section">
 
-<img src="logo.png">
+            <img src="logo.png" alt="Logo">
 
-<div>
+            <div>
 
-<h2>JOBSETU TELUGU</h2>
+                <h2>JOBSETU TELUGU</h2>
 
-<p>AI Powered Government Competitive Exam Platform</p>
+                <p>AI Powered Government Competitive Exam Platform</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<div class="exam-right">
+        <div class="exam-title">
 
-<div class="timer-box">
+            <h2>TGPSC Mock Test - 01</h2>
 
-<i class="fa-solid fa-clock"></i>
+            <p>General Studies | 100 Questions | 90 Minutes</p>
 
-<span id="timer">25:00</span>
+        </div>
 
-</div>
+        <div class="header-right">
 
-<div class="candidate">
+            <div class="timer-box">
 
-<div class="candidate-icon">
+                <i class="fa-solid fa-clock"></i>
 
-<i class="fa-solid fa-user"></i>
+                <span id="timer">90:00</span>
 
-</div>
+            </div>
 
-<div>
+            <div class="candidate-box">
 
-<h4>Vinod Kumar</h4>
+                <i class="fa-solid fa-user"></i>
 
-<p>Online</p>
+                <div>
 
-</div>
+                    <h4 id="candidateName">Guest</h4>
 
-</div>
+                    <p>Online</p>
 
-</div>
+                </div>
 
-</header>
+            </div>
 
-<!-- ================= MAIN ================= -->
+        </div>
 
-<div class="exam-container">
+    </header>
 
-<!-- LEFT SIDE -->
+    <!-- ================= Progress ================= -->
 
-<div class="question-panel">
+    <section class="progress-section">
 
-<div class="question-top">
+        <div class="progress-text">
 
-<span class="question-number">
+            <span>Progress</span>
 
-Question <span id="questionNo">1</span> / 25
+            <span id="progressText">0 / 100 Answered</span>
 
-</span>
+        </div>
 
-</div>
+        <div class="progress-bar">
 
-<div class="question-card">
+            <div id="progressFill"></div>
 
-<h3 id="questionText">
+        </div>
 
-Loading Question...
+    </section>
 
-</h3>
+    <!-- ================= MAIN ================= -->
 
-<div id="options" class="options">
+    <main class="exam-main">
 
-<!-- Options Loaded Here -->
+        <!-- LEFT -->
 
-</div>
+        <section class="question-section">
 
-</div>
+            <div class="question-header">
 
-<div class="question-buttons">
+                <span id="questionNumber">
 
-<button id="prevBtn">
+                    Question 1 of 100
 
-<i class="fa-solid fa-arrow-left"></i>
+                </span>
 
-Previous
+            </div>
 
-</button>
+            <div class="question-card">
 
-<button id="saveNextBtn">Save & Next</button>
-Next
+                <h3 id="questionText">
 
-<i class="fa-solid fa-arrow-right"></i>
+                    Loading Question...
 
-</button>
+                </h3>
 
-</div>
+                <div id="optionsContainer" class="optionsContainer">
 
-</div>
+                    <!-- Options will load here -->
 
-<!-- RIGHT SIDE -->
+                </div>
 
-<div class="palette-panel">
+            </div>
 
-<div class="palette-card">
+            <div class="navigation-buttons">
 
-<h3>
+                <button id="prevBtn" class="btn secondary">
 
-Question Palette
+                    <i class="fa-solid fa-arrow-left"></i>
 
-</h3>
+                    Previous
 
-<div id="palette" class="palette">
+                </button>
 
-<!-- Palette Buttons -->
+                <button id="clearBtn" class="btn warning">
 
-</div>
+                    Clear Response
 
-<button id="submitBtn">
+                </button>
 
-Submit Test
+                <button id="reviewBtn" class="btn review">
 
-</button>
+                    Mark For Review
 
-</div>
+                </button>
 
-<div class="status-card">
+                <button id="saveNextBtn" class="btn primary">
 
-<h3>Legend</h3>
+                    Save & Next
 
-<div class="legend">
+                    <i class="fa-solid fa-arrow-right"></i>
 
-<div class="legend-item">
+                </button>
 
-<div class="box answered"></div>
+            </div>
 
-Answered
+        </section>
 
-</div>
+        <!-- RIGHT -->
 
-<div class="legend-item">
+        <aside class="palette-section">
 
-<div class="box current"></div>
+            <div class="palette-card">
 
-Current
+                <h3>Question Palette</h3>
 
-</div>
+                <div id="palette" class="palette-grid">
 
-<div class="legend-item">
+                    <!-- JS Creates Buttons -->
 
-<div class="box notvisited"></div>
+                </div>
 
-Not Visited
+                <button id="submitBtn" class="submit-btn">
 
-</div>
+                    Submit Test
 
-</div>
+                </button>
 
-</div>
+            </div>
 
-</div>
+            <div class="legend-card">
 
-</div>
+                <h3>Legend</h3>
+
+                <div class="legend-item">
+
+                    <span class="box answered"></span>
+
+                    Answered
+
+                </div>
+
+                <div class="legend-item">
+
+                    <span class="box review"></span>
+
+                    Review
+
+                </div>
+
+                <div class="legend-item">
+
+                    <span class="box current"></span>
+
+                    Current
+
+                </div>
+
+                <div class="legend-item">
+
+                    <span class="box notanswered"></span>
+
+                    Not Answered
+
+                </div>
+
+                <div class="legend-item">
+
+                    <span class="box notvisited"></span>
+
+                    Not Visited
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
 
 </div>
 
 <script src="exam.js"></script>
 
 </body>
-
 </html>
