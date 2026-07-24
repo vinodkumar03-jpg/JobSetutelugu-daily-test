@@ -1,78 +1,108 @@
-let answers = JSON.parse(localStorage.getItem("answers"));
-let resultDiv = document.getElementById("result");
+// ===========================================
+// JobSetu Telugu - Result Page
+// ===========================================
 
-fetch("questions.json")
-.then(response => response.json())
-.then(data => {
+// -----------------------------
+// HTML Elements
+// -----------------------------
+const candidateName = document.getElementById("candidateName");
+const submittedTime = document.getElementById("submittedTime");
 
-    let questions = data;
-    let score = 0;
-    let html = "";
+const percentage = document.getElementById("percentage");
+const status = document.getElementById("status");
 
-    questions.forEach((q, index) => {
+const totalQuestions = document.getElementById("totalQuestions");
+const attempted = document.getElementById("attempted");
+const notAttempted = document.getElementById("notAttempted");
+const correct = document.getElementById("correct");
+const wrong = document.getElementById("wrong");
+const marks = document.getElementById("marks");
 
-        let userAnswer =
-            answers[index] != undefined
-            ? q.options[answers[index]]
-            : "Not Attempted";
+const dashboardBtn = document.getElementById("dashboardBtn");
+const reviewBtn = document.getElementById("reviewBtn");
 
-        let correctAnswer =
-            q.options[q.answer];
+// -----------------------------
+// Load Result
+// -----------------------------
+function loadResult() {
 
-        let isCorrect =
-            answers[index] == q.answer;
+    const result =
+        JSON.parse(localStorage.getItem("examResult"));
 
-        if(isCorrect)
-            score++;
+    if (!result) {
 
-        html += `
+        alert("No result found.");
 
-        <div class="result-card">
+        window.location.href = "dashboard.html";
 
-        <h2>
-        ${isCorrect ? "✅ Correct" : "❌ Incorrect"}
-        </h2>
+        return;
 
-        <h3>Question ${index+1}</h3>
+    }
 
-        <p>
-        <b>Question :</b><br>
-        ${q.question}
-        </p>
+    candidateName.textContent = result.candidate;
 
-        <p style="color:${isCorrect ? "limegreen" : "red"};">
-        <b>Your Answer :</b>
-        ${userAnswer}
-        </p>
+    submittedTime.textContent =
+        "Submitted : " + result.submittedAt;
 
-        ${
-            !isCorrect ?
-            `
-            <p style="color:limegreen;">
-            <b>Correct Answer :</b>
-            ${correctAnswer}
-            </p>
-            `
-            :
-            ""
-        }
+    percentage.textContent =
+        result.percentage + "%";
 
-        <p>
-        <b>Explanation :</b>
-        ${q.explanation}
-        </p>
+    totalQuestions.textContent =
+        result.totalQuestions;
 
-        <hr>
+    attempted.textContent =
+        result.attempted;
 
-        </div>
+    notAttempted.textContent =
+        result.notAttempted;
 
-        `;
+    correct.textContent =
+        result.correct;
 
-    });
+    wrong.textContent =
+        result.wrong;
 
-    document.getElementById("score").innerHTML =
-    `Your Score : ${score} / ${questions.length}`;
+    marks.textContent =
+        result.marks;
 
-    resultDiv.innerHTML = html;
+    // Pass / Fail
+    if (parseFloat(result.percentage) >= 35) {
+
+        status.textContent = "PASS";
+        status.style.color = "#2E7D32";
+
+    } else {
+
+        status.textContent = "FAIL";
+        status.style.color = "#D32F2F";
+
+    }
+
+}
+
+// -----------------------------
+// Dashboard Button
+// -----------------------------
+dashboardBtn.addEventListener("click", () => {
+
+    window.location.href = "dashboard.html";
 
 });
+
+// -----------------------------
+// Review Button
+// -----------------------------
+reviewBtn.addEventListener("click", () => {
+
+    alert("Review Answers module will be added in the next update.");
+
+});
+
+// -----------------------------
+// Initialize
+// -----------------------------
+window.onload = () => {
+
+    loadResult();
+
+};
