@@ -110,8 +110,8 @@ document.getElementById("timer");
 const prevBtn =
 document.getElementById("prevBtn");
 
-const nextBtn =
-document.getElementById("nextBtn");
+const saveNextBtn =
+document.getElementById("saveNextBtn");
 
 // ===================================
 // Display Question
@@ -261,15 +261,33 @@ displayQuestion(currentQuestion);
 // Next Button
 // ===================================
 
-nextBtn.addEventListener("click",()=>{
+saveNextBtn.addEventListener("click", () => {
 
-if(currentQuestion<questions.length-1){
+    if (userAnswers[currentQuestion] == null) {
 
-currentQuestion++;
+        questionStatus[currentQuestion] = "not-answered";
 
-displayQuestion(currentQuestion);
+    }
 
-}
+    else {
+
+        questionStatus[currentQuestion] = "answered";
+
+    }
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+
+        if (questionStatus[currentQuestion] === "not-visited") {
+
+            questionStatus[currentQuestion] = "not-answered";
+
+        }
+
+        displayQuestion(currentQuestion);
+
+    }
 
 });
 
