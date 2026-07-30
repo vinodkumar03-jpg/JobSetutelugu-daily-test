@@ -1,55 +1,106 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // If user is already logged in
+    // ============================
+    // Check Login Session
+    // ============================
+
     if (localStorage.getItem("loggedIn") === "true") {
-        window.location.href = "test.html";
+
+        // If already logged in, go to Dashboard
+        window.location.href = "dashboard.html";
         return;
     }
 
+    // ============================
+    // Login Form
+    // ============================
+
     const loginForm = document.getElementById("loginForm");
 
-    loginForm.addEventListener("submit", function (e) {
+    if (loginForm) {
 
-        e.preventDefault();
+        loginForm.addEventListener("submit", function (e) {
 
-        const username = document.querySelector('input[type="text"]').value.trim();
-        const password = document.querySelector('input[type="password"]').value;
+            e.preventDefault();
 
-        if (username === "" || password === "") {
-            alert("Please enter Username and Password.");
-            return;
-        }
+            const username = document
+                .querySelector('input[type="text"]')
+                .value
+                .trim();
 
-        const users = JSON.parse(localStorage.getItem("users")) || [];
+            const password = document
+                .querySelector('input[type="password"]')
+                .value;
 
-        const validUser = users.find(user =>
-            user.username === username &&
-            user.password === password
-        );
+            if (username === "" || password === "") {
 
-        if (!validUser) {
-            alert("Invalid Username or Password!");
-            return;
-        }
+                alert("Please enter Username and Password.");
+                return;
 
-        // Save login session
-        localStorage.setItem("loggedIn", "true");
-        localStorage.setItem("username", validUser.username);
-        localStorage.setItem("fullname", validUser.fullname);
+            }
 
-        alert("Login Successful!");
+            const users =
+                JSON.parse(localStorage.getItem("users")) || [];
 
-        window.location.href = "dashboard.html";
+            const validUser = users.find(user =>
+                user.username === username &&
+                user.password === password
+            );
 
-    });
+            if (!validUser) {
 
-    // Create Account button
-    const createBtn = document.getElementById("createAccountBtn");
+                alert("Invalid Username or Password!");
+                return;
+
+            }
+
+            // Save Login Session
+
+            localStorage.setItem("loggedIn", "true");
+            localStorage.setItem("username", validUser.username);
+            localStorage.setItem("fullname", validUser.fullname);
+
+            alert("Login Successful!");
+
+            window.location.href = "dashboard.html";
+
+        });
+
+    }
+
+    // ============================
+    // Create Account
+    // ============================
+
+    const createBtn =
+        document.getElementById("createAccountBtn");
 
     if (createBtn) {
+
         createBtn.addEventListener("click", function () {
+
             window.location.href = "register.html";
+
         });
+
     }
 
 });
+
+// ============================
+// Logout Function
+// ============================
+
+function logout() {
+
+    if (confirm("Are you sure you want to logout?")) {
+
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        localStorage.removeItem("fullname");
+
+        window.location.href = "index.html";
+
+    }
+
+}
