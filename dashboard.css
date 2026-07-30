@@ -737,3 +737,16 @@ line-height:28px;
 }
 
 }
+.logout-btn{
+    background:#D32F2F;
+    color:#fff;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-left:15px;
+}
+
+.logout-btn:hover{
+    background:#B71C1C;
+}
