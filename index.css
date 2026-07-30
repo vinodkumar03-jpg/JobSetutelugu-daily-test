@@ -238,3 +238,343 @@ body{
     background:#f8fbff;
 
 }
+/* ==========================
+        LOGIN CARD
+========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:520px;
+
+    background:#ffffff;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.login-card h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+}
+
+.login-card h2 span{
+
+    color:#F97316;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#64748B;
+
+    margin-top:12px;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+        INPUT BOXES
+========================== */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:58px;
+
+    border:2px solid #E2E8F0;
+
+    border-radius:15px;
+
+    padding-left:55px;
+
+    padding-right:55px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.input-box input:focus{
+
+    border-color:#0B4DBA;
+
+    box-shadow:0 0 0 4px rgba(11,77,186,.12);
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748B;
+
+    font-size:18px;
+
+}
+
+.input-box i:first-child{
+
+    left:20px;
+
+}
+
+#togglePassword{
+
+    right:20px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================
+        OPTIONS
+========================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:25px 0;
+
+    font-size:15px;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#334155;
+
+}
+
+.options a{
+
+    color:#0B4DBA;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+        LOGIN BUTTON
+========================== */
+
+#loginBtn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#0B4DBA;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#loginBtn:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+        DIVIDER
+========================== */
+
+.divider{
+
+    margin:30px 0;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#CBD5E1;
+
+}
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#CBD5E1;
+
+}
+
+.divider span{
+
+    background:#ffffff;
+
+    padding:0 15px;
+
+    color:#64748B;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+      REGISTER BUTTON
+========================== */
+
+#registerBtn{
+
+    width:100%;
+
+    height:56px;
+
+    border:2px solid #0B4DBA;
+
+    background:#ffffff;
+
+    color:#0B4DBA;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#registerBtn:hover{
+
+    background:#0B4DBA;
+
+    color:#ffffff;
+
+}
+
+/* ==========================
+          FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#475569;
+
+    font-size:15px;
+
+}
+
+footer strong{
+
+    color:#0B4DBA;
+
+}
