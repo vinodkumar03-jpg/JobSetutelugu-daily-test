@@ -51,7 +51,7 @@ body{
 
 .left-panel{
 
-    width:40%;
+    width:45%;
 
     background:linear-gradient(135deg,#f7fbff,#eef4ff);
 
@@ -227,7 +227,7 @@ body{
 
 .right-panel{
 
-    width:60%;
+    width:55%;
 
     display:flex;
 
@@ -415,7 +415,7 @@ body{
 
     width:100%;
 
-    height:56px;
+    height:60px;
 
     border:none;
 
@@ -425,7 +425,7 @@ body{
 
     color:#ffffff;
 
-    font-size:18px;
+    font-size:20px;
 
     font-weight:600;
 
