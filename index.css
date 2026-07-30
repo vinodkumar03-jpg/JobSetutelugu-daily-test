@@ -1,0 +1,237 @@
+/* ==========================================
+   JobSetu Telugu Login Page
+   Version : v0.2
+   File    : index.css
+==========================================*/
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f8ff;
+
+    color:#1e293b;
+
+    min-height:100vh;
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+
+}
+
+/* ==========================
+        LEFT PANEL
+========================== */
+
+.left-panel{
+
+    width:40%;
+
+    background:linear-gradient(135deg,#f7fbff,#eef4ff);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:180px;
+
+    margin-bottom:25px;
+
+}
+
+.left-panel h1{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.blue{
+
+    color:#0B4DBA;
+
+}
+
+.orange{
+
+    color:#F97316;
+
+}
+
+.telugu{
+
+    color:#0B4DBA;
+
+    font-size:42px;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:4px;
+
+    background:#F97316;
+
+    border-radius:20px;
+
+    margin:18px auto;
+
+}
+
+.tagline{
+
+    font-size:20px;
+
+    line-height:34px;
+
+    color:#475569;
+
+    max-width:450px;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+        FEATURES
+========================== */
+
+.features{
+
+    width:100%;
+
+    max-width:420px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#ffffff;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:22px;
+
+}
+
+.blue-bg{
+
+    background:#3B82F6;
+
+}
+
+.green-bg{
+
+    background:#22C55E;
+
+}
+
+.purple-bg{
+
+    background:#8B5CF6;
+
+}
+
+.feature h3{
+
+    font-size:18px;
+
+    margin-bottom:4px;
+
+}
+
+.feature p{
+
+    font-size:14px;
+
+    color:#64748B;
+
+}
+
+/* ==========================
+        RIGHT PANEL
+========================== */
+
+.right-panel{
+
+    width:60%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8fbff;
+
+}
