@@ -521,7 +521,7 @@ body{
 
     width:100%;
 
-    height:56px;
+    height:60px;
 
     border:2px solid #0B4DBA;
 
@@ -531,7 +531,7 @@ body{
 
     border-radius:15px;
 
-    font-size:18px;
+    font-size:19px;
 
     font-weight:600;
 
@@ -546,14 +546,6 @@ body{
     align-items:center;
 
     gap:10px;
-
-}
-
-#registerBtn:hover{
-
-    background:#0B4DBA;
-
-    color:#ffffff;
 
 }
 
