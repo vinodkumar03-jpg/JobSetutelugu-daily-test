@@ -78,12 +78,31 @@ body{
 }
 
 .left-panel h1{
-
     font-size:46px;
-
     font-weight:700;
+    margin-bottom:50px;
+    position:relative;
+}
 
-    margin-bottom:15px;
+.left-panel h1::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+    height:4px;
+
+    background:#F97316;
+
+    border-radius:50px;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    bottom:-20px;
+
+}
 
 }
 
