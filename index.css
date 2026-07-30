@@ -43,10 +43,29 @@ body{
 
 .container{
 
-    width:100%;
+    display:flex;
+
     min-height:100vh;
 
-    display:flex;
+    position:relative;
+
+}
+
+.container::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:45%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:#E2E8F0;
 
 }
 
@@ -592,5 +611,48 @@ footer{
 footer strong{
 
     color:#0B4DBA;
+
+}
+/* ==========================
+        BACKGROUND DECORATION
+========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.10);
+
+    top:-120px;
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(249,115,22,.08);
+
+    bottom:-80px;
+    right:-80px;
+
+    z-index:-1;
 
 }
