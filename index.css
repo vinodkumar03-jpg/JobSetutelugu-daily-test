@@ -26,14 +26,19 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#f5f8ff;
-
-    color:#1e293b;
-
     min-height:100vh;
 
-}
+    color:#1E293B;
 
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,#dbeafe 0%,transparent 22%),
+        radial-gradient(circle at bottom left,#c7d2fe 0%,transparent 25%),
+        radial-gradient(circle at top right,#fde68a 0%,transparent 20%),
+        linear-gradient(135deg,#f8fbff,#eef4ff);
+
+}
 /* Main Container */
 
 .container{
