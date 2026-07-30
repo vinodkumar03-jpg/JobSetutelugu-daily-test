@@ -1,61 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JobSetu తెలుగు</title>
+    <title>JobSetu Telugu | Login</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/index.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-    <div class="login-container">
+    <!-- ===========================
+            Login Container
+    ============================ -->
 
-        <!-- Left Section -->
+    <div class="container">
+
+        <!-- ===========================
+                Left Panel
+        ============================ -->
+
         <div class="left-panel">
 
-            <img src="images/logo.png" alt="JobSetu Telugu Logo" class="logo">
+            <img src="images/logo.png"
+                 alt="JobSetu Telugu Logo"
+                 class="logo">
 
-            <h1>JobSetu తెలుగు</h1>
+            <h1>
+                <span class="blue">Job</span><span class="orange">Setu</span>
+                <span class="telugu">తెలుగు</span>
+            </h1>
 
-            <p>
-                Your Gateway to Government Jobs & Competitive Exam Success
+            <div class="line"></div>
+
+            <p class="tagline">
+                Your Gateway to
+                Government Jobs &
+                Competitive Exam Success
             </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="icon blue-bg">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Latest Job Notifications</h3>
+
+                        <p>Stay updated with daily job alerts.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div class="icon green-bg">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Mock Tests</h3>
+
+                        <p>Practice with quality mock tests.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div class="icon purple-bg">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Performance Analytics</h3>
+
+                        <p>Track your progress and improve.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <!-- Right Section -->
+        <!-- ===========================
+                Right Panel
+        ============================ -->
+
         <div class="right-panel">
 
             <div class="login-card">
 
-                <h2>Welcome Back</h2>
+                <h2>
+                    Welcome <span>Back!</span>
+                </h2>
 
-                <p>Please login to continue</p>
+                <p class="subtitle">
+                    Please login to continue
+                </p>
 
                 <!-- Username -->
+
                 <div class="input-box">
+
                     <i class="fa-solid fa-user"></i>
 
                     <input
                         type="text"
                         id="username"
                         placeholder="Username or Email">
+
                 </div>
 
                 <!-- Password -->
+
                 <div class="input-box">
 
                     <i class="fa-solid fa-lock"></i>
@@ -65,13 +151,13 @@
                         id="password"
                         placeholder="Password">
 
-                    <span id="togglePassword">
-                        <i class="fa-solid fa-eye"></i>
-                    </span>
+                    <i class="fa-solid fa-eye"
+                       id="togglePassword"></i>
 
                 </div>
 
-                <!-- Remember -->
+                <!-- Options -->
+
                 <div class="options">
 
                     <label>
@@ -86,22 +172,29 @@
 
                 </div>
 
-                <!-- Login -->
+                <!-- Login Button -->
+
                 <button id="loginBtn">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
 
                     Login
 
                 </button>
 
                 <!-- Divider -->
+
                 <div class="divider">
 
                     <span>OR</span>
 
                 </div>
 
-                <!-- Register -->
-                <button id="registerBtn" class="secondary-btn">
+                <!-- Register Button -->
+
+                <button id="registerBtn">
+
+                    <i class="fa-solid fa-user-plus"></i>
 
                     Create New Account
 
@@ -113,7 +206,31 @@
 
     </div>
 
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            ⭐ ⭐ ⭐
+            Trusted by Thousands of Aspirants
+            ⭐ ⭐ ⭐
+
+        </p>
+
+        <p>
+
+            © 2026 <strong>JobSetu Telugu</strong>.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
     <script src="js/index.js"></script>
 
 </body>
+
 </html>
