@@ -122,3 +122,20 @@ window.addEventListener("load", () => {
     }
 
 });
+// ============================
+// Logout Function
+// ============================
+
+function logout() {
+
+    if (confirm("Are you sure you want to logout?")) {
+
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        localStorage.removeItem("fullname");
+
+        window.location.href = "index.html";
+
+    }
+
+}
