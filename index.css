@@ -77,7 +77,9 @@ body{
 
     width:45%;
 
-    background:linear-gradient(135deg,#f7fbff,#eef4ff);
+   background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
 
     display:flex;
 
