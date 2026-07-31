@@ -126,6 +126,9 @@ body{
 
 .left-panel{
     flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .right-panel{
@@ -250,6 +253,9 @@ body{
     display:flex;
     flex-direction:column;
     gap:22px;
+    width:100%;
+    max-width:650px;
+    margin:0 auto;
 }
 
 .feature{
@@ -595,9 +601,12 @@ footer{
 }
 
 .tagline{
-
-    width:100%;
-
+    width:90%;
+    text-align:center;
+    font-size:20px;
+    line-height:1.8;
+    color:#546e7a;
+    margin-bottom:40px;
 }
 
 }
