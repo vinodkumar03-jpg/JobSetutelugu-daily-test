@@ -53,6 +53,6 @@ document.getElementById("registerBtn").addEventListener("click", () => {
     // Redirect later
     // window.location.href = "register.html";
 
-    alert("Registration page coming soon!");
-
+   document.getElementById("registerBtn").addEventListener("click", () => {
+    window.location.href = "register.html";
 });
