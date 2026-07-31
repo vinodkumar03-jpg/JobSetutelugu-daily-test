@@ -274,9 +274,11 @@ body{
 
 .terms label{
 
-    color:#e2e8f0;
+    color:#475569;
 
-    font-size:14px;
+    font-size:15px;
+
+    font-weight:500;
 
     display:flex;
 
@@ -293,14 +295,17 @@ body{
 
 .terms a{
 
-    color:#38bdf8;
+    color:#2563eb;
 
     text-decoration:none;
 
-    font-weight:600;
+    font-weight:700;
 }
 
 .terms a:hover{
+
+    color:#1d4ed8;
+
     text-decoration:underline;
 }
 
@@ -356,24 +361,27 @@ body{
 
     margin-top:25px;
 
-    color:#dbeafe;
+    color:#475569;
 
-    font-size:15px;
+    font-size:16px;
+
+    font-weight:500;
 }
-
 .login-link a{
 
-    color:#38bdf8;
+    color:#2563eb;
 
     text-decoration:none;
 
-    font-weight:600;
+    font-weight:700;
 }
 
 .login-link a:hover{
+
+    color:#1d4ed8;
+
     text-decoration:underline;
 }
-
 /* ===============================
    Animation
 ================================= */
