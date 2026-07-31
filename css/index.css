@@ -221,34 +221,23 @@ body{
 }
 
 .site-title{
-    line-height:1;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:10px;
-    flex-wrap:nowrap;
-    width:100%;
-    text-align:center;
-    margin:5px auto;
-    animation:fadeUp .9s ease;
+    margin:0 auto 10px;
+    line-height:1;
 }
 
-.job{
-    color:#1565C0;
-    font-size:72px;
-    font-weight:800;
-}
-
+.job,
 .setu{
-    color:#FF9800;
     font-size:72px;
     font-weight:800;
 }
 
 .telugu{
-    color:#263238;
-    font-size:72px;
-    font-weight:800;
+    font-size:44px;
+    font-weight:700;
     white-space:nowrap;
 }
 /* =====================
