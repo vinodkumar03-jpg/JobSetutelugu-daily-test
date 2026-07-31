@@ -37,7 +37,7 @@ body{
     position:absolute;
     border-radius:50%;
     filter:blur(6px);
-    opacity:.45;
+    opacity:.70;
     animation:float 8s ease-in-out infinite;
 }
 
@@ -70,7 +70,7 @@ body{
 .shape{
     position:absolute;
     font-size:34px;
-    opacity:.18;
+    opacity:.20;
     animation:floating 7s ease-in-out infinite;
     user-select:none;
 }
