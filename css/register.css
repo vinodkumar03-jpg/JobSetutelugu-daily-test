@@ -14,7 +14,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background:linear-gradient(135deg,#eef7ff,#dbeafe,#f8fbff);
     overflow-x:hidden;
     position:relative;
     padding:40px 20px;
@@ -80,19 +80,17 @@ body{
 .register-card{
 
     width:100%;
-    max-width:520px;
+    max-width:600px;
 
-    background:rgba(255,255,255,.10);
+    background:#ffffff;
 
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.18);
+    border:none;
 
     border-radius:25px;
 
     padding:45px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.30);
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
 
     animation:fadeUp .8s ease;
 }
@@ -184,34 +182,37 @@ body{
 
     width:100%;
 
-    padding:15px 50px;
+    height:58px;
 
-    border:none;
+    padding:15px 55px;
+
+    border:1px solid #d9e3f0;
 
     outline:none;
 
-    border-radius:12px;
+    border-radius:15px;
 
-    font-size:15px;
+    font-size:16px;
 
-    background:rgba(255,255,255,.15);
+    background:#ffffff;
 
-    color:#fff;
+    color:#2c3e50;
 
-    transition:.3s;
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .input-box input::placeholder{
-    color:#dbeafe;
+    color:#7b8794;
 }
 
 .input-box input:focus{
 
-    background:rgba(255,255,255,.22);
+    border-color:#2563eb;
 
-    box-shadow:0 0 0 2px rgba(56,189,248,.5);
+    box-shadow:0 0 0 4px rgba(37,99,235,0.15);
 }
-
 .input-box i:first-child{
 
     position:absolute;
