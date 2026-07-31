@@ -264,26 +264,21 @@ body{
     display:flex;
     align-items:center;
     gap:25px;
-
     background:#fff;
-
-    padding:24px;
-
+    padding:24px 30px;
     border-radius:22px;
-
     box-shadow:0 15px 35px rgba(0,0,0,.08);
-
     transition:.35s;
 }
 
 .feature:hover{
-
     transform:translateY(-8px);
-
     box-shadow:0 25px 45px rgba(33,150,243,.20);
-
 }
-
+.feature div:last-child{
+    flex:1;
+    text-align:left;
+}
 .icon{
 
     width:64px;
@@ -317,15 +312,17 @@ body{
 
 .feature h3{
     font-size:18px;
-    font-weight:600;
+    font-weight:700;
     color:#263238;
-    margin-bottom:6px;
+    margin-bottom:8px;
+    text-align:left;
 }
 
 .feature p{
-    font-size:14px;
+    font-size:15px;
     color:#607d8b;
     line-height:1.6;
+    text-align:left;
 }
 /* =========================================================
    JobSetu Telugu
