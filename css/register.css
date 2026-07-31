@@ -171,3 +171,245 @@ body{
 
     font-size:15px;
 }
+/* ===============================
+   Input Fields
+================================= */
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:15px 50px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.input-box input::placeholder{
+    color:#dbeafe;
+}
+
+.input-box input:focus{
+
+    background:rgba(255,255,255,.22);
+
+    box-shadow:0 0 0 2px rgba(56,189,248,.5);
+}
+
+.input-box i:first-child{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#dbeafe;
+
+    font-size:16px;
+}
+
+.togglePassword,
+.toggleConfirm{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#dbeafe;
+
+    transition:.3s;
+}
+
+.togglePassword:hover,
+.toggleConfirm:hover{
+    color:#38bdf8;
+}
+
+/* ===============================
+   Terms
+================================= */
+
+.terms{
+
+    margin:20px 0;
+}
+
+.terms label{
+
+    color:#e2e8f0;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+}
+
+.terms input[type="checkbox"]{
+    cursor:pointer;
+}
+
+.terms a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.terms a:hover{
+    text-decoration:underline;
+}
+
+/* ===============================
+   Button
+================================= */
+
+#registerBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+#registerBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 30px rgba(14,165,233,.35);
+}
+
+/* ===============================
+   Login Link
+================================= */
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#dbeafe;
+
+    font-size:15px;
+}
+
+.login-link a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/* ===============================
+   Animation
+================================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===============================
+   Responsive
+================================= */
+
+@media(max-width:600px){
+
+    .register-card{
+        padding:30px 20px;
+    }
+
+    .logo{
+        width:90px;
+        height:90px;
+    }
+
+    .title{
+        font-size:28px;
+    }
+
+    .telugu{
+        font-size:18px;
+    }
+
+    .register-card h2{
+        font-size:22px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .input-box input{
+        padding:14px 45px;
+    }
+}
