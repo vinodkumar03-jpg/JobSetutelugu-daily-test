@@ -1,1 +1,660 @@
+body{
+    background:red !important;
+}
+/* ==========================================
+   JobSetu Telugu Login Page
+   Version : v0.2
+   File    : index.css
+==========================================*/
 
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    color:#90D5FF;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,#dbeafe 0%,transparent 22%),
+        radial-gradient(circle at bottom left,#c7d2fe 0%,transparent 25%),
+        radial-gradient(circle at top right,#fde68a 0%,transparent 20%),
+        linear-gradient(135deg,#f8fbff,#eef4ff);
+
+}
+/* Main Container */
+
+.container{
+
+    display:flex;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+.container::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:45%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:#E2E8F0;
+
+}
+
+/* ==========================
+        LEFT PANEL
+========================== */
+
+.left-panel{
+
+    width:45%;
+
+   background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:180px;
+
+    margin-bottom:25px;
+
+}
+
+.left-panel h1{
+    font-size:46px;
+    font-weight:700;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.left-panel h1::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+    height:4px;
+
+    background:#F97316;
+
+    border-radius:50px;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    bottom:-20px;
+
+}
+
+}
+
+.blue{
+
+    color:#0B4DBA;
+
+}
+
+.orange{
+
+    color:#F97316;
+
+}
+
+.telugu{
+
+    color:#0B4DBA;
+
+    font-size:42px;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:4px;
+
+    background:#F97316;
+
+    border-radius:20px;
+
+    margin:18px auto;
+
+}
+
+.tagline{
+
+    font-size:20px;
+
+    line-height:34px;
+
+    color:#475569;
+
+    max-width:450px;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+        FEATURES
+========================== */
+
+.features{
+
+    width:100%;
+
+    max-width:420px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#ffffff;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:22px;
+
+}
+
+.blue-bg{
+
+    background:#3B82F6;
+
+}
+
+.green-bg{
+
+    background:#22C55E;
+
+}
+
+.purple-bg{
+
+    background:#8B5CF6;
+
+}
+
+.feature h3{
+
+    font-size:18px;
+
+    margin-bottom:4px;
+
+}
+
+.feature p{
+
+    font-size:14px;
+
+    color:#64748B;
+
+}
+
+/* ==========================
+        RIGHT PANEL
+========================== */
+
+.right-panel{
+
+    width:55%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8fbff;
+
+}
+/* ==========================
+        LOGIN CARD
+========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:560px;
+
+    background:#ffffff;
+
+    padding:55px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.login-card h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+}
+
+.login-card h2 span{
+
+    color:#F97316;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#64748B;
+
+    margin-top:12px;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+        INPUT BOXES
+========================== */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:58px;
+
+    border:2px solid #E2E8F0;
+
+    border-radius:15px;
+
+    padding-left:55px;
+
+    padding-right:55px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.input-box input:focus{
+
+    border-color:#0B4DBA;
+
+    box-shadow:0 0 0 4px rgba(11,77,186,.12);
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748B;
+
+    font-size:18px;
+
+}
+
+.input-box i:first-child{
+
+    left:20px;
+
+}
+
+#togglePassword{
+
+    right:20px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================
+        OPTIONS
+========================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:25px 0;
+
+    font-size:15px;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#334155;
+
+}
+
+.options a{
+
+    color:#0B4DBA;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+        LOGIN BUTTON
+========================== */
+
+#loginBtn{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#0B4DBA;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#loginBtn:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+        DIVIDER
+========================== */
+
+.divider{
+
+    margin:30px 0;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#CBD5E1;
+
+}
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#CBD5E1;
+
+}
+
+.divider span{
+
+    background:#ffffff;
+
+    padding:0 15px;
+
+    color:#64748B;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+      REGISTER BUTTON
+========================== */
+
+#registerBtn{
+
+    width:100%;
+
+    height:60px;
+
+    border:2px solid #0B4DBA;
+
+    background:#ffffff;
+
+    color:#0B4DBA;
+
+    border-radius:15px;
+
+    font-size:19px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* ==========================
+          FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#475569;
+
+    font-size:15px;
+
+}
+
+footer strong{
+
+    color:#0B4DBA;
+
+}
+/* ==========================
+        BACKGROUND DECORATION
+========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.10);
+
+    top:-120px;
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(249,115,22,.08);
+
+    bottom:-80px;
+    right:-80px;
+
+    z-index:-1;
+
+}
