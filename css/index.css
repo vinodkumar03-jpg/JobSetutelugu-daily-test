@@ -221,6 +221,7 @@ body{
 }
 
 .site-title{
+    line-height:1;
     display:flex;
     justify-content:center;
     align-items:center;
