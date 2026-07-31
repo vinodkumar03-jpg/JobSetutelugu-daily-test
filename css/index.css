@@ -204,44 +204,33 @@ body{
     animation:fadeUp .8s ease;
 }
 
-.left-panel h1{
-    font-size:52px;
-    font-weight:700;
-    line-height:1.2;
+.site-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:nowrap;
+    margin:15px 0;
     animation:fadeUp .9s ease;
 }
 
-.blue{
-    color:#1565c0;
+.job{
+    color:#1565C0;
+    font-size:52px;
+    font-weight:700;
 }
 
-.orange{
-    color:#ff9800;
+.setu{
+    color:#FF9800;
+    font-size:52px;
+    font-weight:700;
 }
 
 .telugu{
-    display:block;
-    margin-top:8px;
     color:#263238;
-    font-size:42px;
+    font-size:34px;
+    font-weight:600;
+    white-space:nowrap;
 }
-
-.title-line{
-    width:90px;
-    height:5px;
-    border-radius:50px;
-    background:#ff9800;
-    margin:20px 0 25px;
-}
-
-.tagline{
-    width:90%;
-    font-size:18px;
-    line-height:1.8;
-    color:#546e7a;
-    margin-bottom:40px;
-}
-
 /* =====================
    Feature Cards
 ===================== */
