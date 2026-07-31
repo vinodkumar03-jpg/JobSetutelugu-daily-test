@@ -48,11 +48,8 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 
 // Register Button
 
-document.getElementById("registerBtn").addEventListener("click", () => {
+const registerBtn = document.getElementById("registerBtn");
 
-    // Redirect later
-    // window.location.href = "register.html";
-
-   document.getElementById("registerBtn").addEventListener("click", () => {
+registerBtn.addEventListener("click", function () {
     window.location.href = "register.html";
 });
