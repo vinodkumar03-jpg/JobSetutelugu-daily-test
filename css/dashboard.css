@@ -1,1 +1,246 @@
+/*====================================
+        JobSetu Telugu Dashboard
+======================================*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#f5f8fc;
+
+    color:#222;
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    outline:none;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+/*====================================
+        Dashboard Layout
+======================================*/
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    flex:1;
+
+    margin-left:280px;
+
+    padding:30px;
+
+}
+/*====================================
+        Sidebar
+======================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    box-shadow:0 0 25px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:30px 22px;
+
+}
+
+.sidebar-logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.sidebar-logo img{
+
+    width:85px;
+
+    margin:auto;
+
+    margin-bottom:10px;
+
+}
+
+.sidebar-logo h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.job{
+
+    color:#2563eb;
+
+}
+
+.setu{
+
+    color:#f97316;
+
+}
+
+.telugu{
+
+    display:block;
+
+    font-size:18px;
+
+    color:#555;
+
+    margin-top:4px;
+
+}
+
+.sidebar nav ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.sidebar nav li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.sidebar nav li i{
+
+    width:24px;
+
+    font-size:18px;
+
+    color:#2563eb;
+
+}
+
+.sidebar nav li:hover{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+}
+
+.sidebar nav li.active{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.sidebar nav li.active i{
+
+    color:#fff;
+
+}
+
+.logout button{
+
+    width:100%;
+
+    height:52px;
+
+    border-radius:12px;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.logout button:hover{
+
+    background:#dc2626;
+
+}
