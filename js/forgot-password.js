@@ -28,6 +28,13 @@ document.getElementById("sendOtpBtn").addEventListener("click", () => {
 
     }
 
-    alert("OTP functionality will be added with Firebase.\n\nEmail Verified Successfully.");
+  // Save a demo OTP
+localStorage.setItem("jobsetuOTP", "123456");
+
+// Save entered email
+localStorage.setItem("resetEmail", email);
+
+// Go to OTP page
+window.location.href = "otp-verification.html";
 
 });
