@@ -66,3 +66,18 @@ document.getElementById("loginBtn").addEventListener("click", () => {
     }
 
 });
+// =======================================
+// Register Button
+// =======================================
+
+const registerBtn = document.getElementById("registerBtn");
+
+if (registerBtn) {
+
+    registerBtn.addEventListener("click", () => {
+
+        window.location.href = "register.html";
+
+    });
+
+}
