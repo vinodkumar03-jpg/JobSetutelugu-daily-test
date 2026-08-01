@@ -72,7 +72,7 @@ img{
 
     flex:1;
 
-    margin-left:280px;
+    margin-left:300px;
 
     padding:30px;
 
@@ -89,7 +89,7 @@ img{
 
     top:0;
 
-    width:280px;
+    width:300px;
 
     height:100vh;
 
@@ -163,7 +163,7 @@ img{
 
     flex-direction:column;
 
-    gap:8px;
+    gap:12px;
 
 }
 
@@ -250,7 +250,7 @@ img{
 
 .header{
 
-    height:80px;
+    height:72px;
 
     background:#ffffff;
 
@@ -311,6 +311,7 @@ img{
 .search-box{
 
     flex:1;
+max-width:900px;
 
     height:50px;
 
