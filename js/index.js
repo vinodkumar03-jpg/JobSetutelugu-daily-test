@@ -39,17 +39,30 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 
     }
 
-    alert("Login Successful!");
+    // Get user from Local Storage
+    const savedUser = JSON.parse(localStorage.getItem("jobsetuUser"));
 
-    // Redirect to Dashboard later
-    // window.location.href = "dashboard.html";
+    if (!savedUser) {
 
-});
+        alert("No account found.\n\nPlease create an account first.");
 
-// Register Button
+        return;
 
-const registerBtn = document.getElementById("registerBtn");
+    }
 
-registerBtn.addEventListener("click", function () {
-    window.location.href = "register.html";
+    if (
+        username === savedUser.username &&
+        pass === savedUser.password
+    ) {
+
+        alert("Login Successful!");
+
+        window.location.href = "dashboard.html";
+
+    } else {
+
+        alert("Invalid Username or Password.");
+
+    }
+
 });
