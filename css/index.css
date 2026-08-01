@@ -206,24 +206,22 @@ body{
 .logo{
 
     width:140px;
-
     height:140px;
 
     display:block;
-
-    margin:0 auto 10px;
+    margin:0 auto 8px;
 
     object-fit:contain;
 
     border-radius:50%;
 
-    background:#fff;
+    background:#ffffff;
 
-    padding:6px;
+    padding:2px;              /* Reduced from 6px */
 
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    box-shadow:0 6px 15px rgba(0,0,0,.12);  /* Softer shadow */
 
-    transition:.3s;
+    transition:0.3s;
 
 }
 
