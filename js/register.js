@@ -95,8 +95,8 @@ document.getElementById("registerBtn").addEventListener("click", () => {
 
     localStorage.setItem("jobsetuUser", JSON.stringify(user));
 
-    alert("Registration Successful!");
+alert("Account Created Successfully!\n\nPlease login with your Username and Password.");
 
-    window.location.href = "dashboard.html";
+window.location.href = "index.html";
 
 });
