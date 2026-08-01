@@ -199,25 +199,38 @@ body{
    Login Page CSS - Part 2
    ========================================================= */
 
-/* =====================
-   Left Panel
-===================== */
-
-/* Logo */
+/*==========================
+ Logo
+===========================*/
 
 .logo{
-    width:145px;
-    height:145px;
+
+    width:140px;
+
+    height:140px;
+
     display:block;
-    margin:0 auto 10px auto;
+
+    margin:0 auto 10px;
+
+    object-fit:contain;
+
     border-radius:50%;
-    object-fit:cover;
+
+    background:#fff;
+
+    padding:6px;
+
     box-shadow:0 12px 30px rgba(0,0,0,.18);
+
     transition:.3s;
+
 }
 
 .logo:hover{
+
     transform:scale(1.05);
+
 }
 
 .site-title{
