@@ -81,3 +81,32 @@ if (registerBtn) {
     });
 
 }
+// =======================================
+// Forgot Password
+// =======================================
+
+const forgotPassword = document.getElementById("forgotPassword");
+
+if (forgotPassword) {
+
+    forgotPassword.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const savedUser = JSON.parse(localStorage.getItem("jobsetuUser"));
+
+        if (!savedUser) {
+
+            alert("No account found.\n\nPlease create an account first.");
+            return;
+
+        }
+
+        alert(
+            "Registered Username: " + savedUser.username +
+            "\n\nRegistered Email: " + savedUser.email
+        );
+
+    });
+
+}
