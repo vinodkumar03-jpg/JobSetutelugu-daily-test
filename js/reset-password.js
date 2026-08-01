@@ -1,80 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+document.getElementById("resetBtn").addEventListener("click",()=>{
 
-<head>
+const newPassword=document.getElementById("newPassword").value.trim();
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+const confirmPassword=document.getElementById("confirmPassword").value.trim();
 
-<title>Reset Password | JobSetu Telugu</title>
+if(newPassword==="" || confirmPassword===""){
 
-<link rel="icon" href="images/logo.png">
+alert("Please fill all fields.");
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+return;
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+if(newPassword.length<6){
 
-<link rel="stylesheet" href="css/reset-password.css">
+alert("Password must be at least 6 characters.");
 
-</head>
+return;
 
-<body>
+}
 
-<div class="container">
+if(newPassword!==confirmPassword){
 
-    <div class="card">
+alert("Passwords do not match.");
 
-        <img src="images/logo.png" class="logo">
+return;
 
-        <h2>Create New Password</h2>
+}
 
-        <p>Choose a strong password for your JobSetu Telugu account.</p>
+const user=JSON.parse(localStorage.getItem("jobsetuUser"));
 
-        <div class="input-box">
+user.password=newPassword;
 
-            <i class="fa-solid fa-lock"></i>
+localStorage.setItem("jobsetuUser",JSON.stringify(user));
 
-            <input type="password" id="newPassword" placeholder="New Password">
+alert("Password Updated Successfully!");
 
-        </div>
+window.location.href="index.html";
 
-        <div class="input-box">
-
-            <i class="fa-solid fa-lock"></i>
-
-            <input type="password" id="confirmPassword" placeholder="Confirm Password">
-
-        </div>
-
-        <button id="resetBtn">
-
-            <i class="fa-solid fa-key"></i>
-
-            Update Password
-
-        </button>
-
-        <div class="back">
-
-            <a href="index.html">
-
-                <i class="fa-solid fa-arrow-left"></i>
-
-                Back to Login
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="js/reset-password.js"></script>
-
-</body>
-
-</html>
+});
