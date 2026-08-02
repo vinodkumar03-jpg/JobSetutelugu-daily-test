@@ -684,11 +684,9 @@ input{
 
 .hero-right{
 
-    flex:0 0 48%;
-
     display:flex;
 
-    justify-content:center;
+    justify-content:flex-end;
 
     align-items:center;
 
@@ -696,13 +694,15 @@ input{
 
 .hero-right img{
 
-    width:100%;
+    width:520px;
 
-    max-width:420px;
+    max-width:none;
 
     height:auto;
 
     object-fit:contain;
+
+    transition:0.3s;
 
 }
 /*==================================================
