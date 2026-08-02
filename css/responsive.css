@@ -165,15 +165,23 @@
 
 @media screen and (max-width:768px){
 
+/* Sidebar */
+
 .sidebar{
 
     position:fixed;
+
+    top:0;
 
     left:-100%;
 
     width:280px;
 
-    transition:.3s;
+    height:100vh;
+
+    transition:0.3s;
+
+    z-index:9999;
 
 }
 
@@ -183,6 +191,8 @@
 
 }
 
+/* Main Content */
+
 .main-content{
 
     margin-left:0;
@@ -191,11 +201,15 @@
 
 }
 
+/* Header */
+
 .header{
 
     height:auto;
 
     padding:15px;
+
+    border-radius:15px;
 
 }
 
@@ -213,19 +227,27 @@
 
 .notification-btn,
 
-.theme-btn{
+.theme-btn,
+
+.menu-btn{
 
     width:42px;
 
     height:42px;
 
+    font-size:16px;
+
 }
+
+/* Hero */
 
 .hero{
 
     flex-direction:column;
 
     text-align:center;
+
+    gap:20px;
 
     padding:25px;
 
@@ -235,7 +257,7 @@
 
 .hero-left{
 
-    width:100%;
+    flex:1;
 
 }
 
@@ -247,7 +269,7 @@
 
 .hero-left h3{
 
-    font-size:17px;
+    font-size:18px;
 
 }
 
@@ -265,6 +287,8 @@
 
     align-items:center;
 
+    width:100%;
+
 }
 
 .start-btn,
@@ -273,7 +297,7 @@
 
     width:100%;
 
-    max-width:320px;
+    max-width:300px;
 
 }
 
@@ -281,13 +305,17 @@
 
     order:-1;
 
+    justify-content:center;
+
 }
 
 .hero-right img{
 
-    width:280px;
+    width:260px;
 
 }
+
+/* Quick Access */
 
 .quick-grid{
 
