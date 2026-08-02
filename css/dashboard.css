@@ -512,75 +512,89 @@ input{
 
 .hero{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:1fr 1fr;
+    justify-content:space-between;
 
     align-items:center;
 
-    gap:30px;
+    gap:40px;
 
     background:#ffffff;
 
-    border-radius:26px;
+    border-radius:24px;
 
-    padding:40px 50px;
+    padding:45px 55px;
 
-    min-height:420px;
+    min-height:400px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
 
     margin-bottom:40px;
 
 }
+
+/*====================================
+        LEFT SECTION
+====================================*/
+
 .hero-left{
 
-    width:100%;
+    flex:0 0 52%;
 
 }
+
 .hero-left h1{
 
-    font-size:58px;
+    font-size:48px;
 
     font-weight:700;
 
     color:#102b66;
 
-    line-height:1.1;
+    line-height:1.15;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
 .hero-left h3{
 
-    font-size:24px;
-
-    color:#374151;
-
-    line-height:1.5;
-
-    margin-bottom:35px;
+    font-size:20px;
 
     font-weight:500;
 
+    color:#374151;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
 }
+
+/*====================================
+        FEATURES
+====================================*/
 
 .hero-features{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
+    gap:16px;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
 
 .hero-features div{
 
-    font-size:17px;
+    display:flex;
+
+    align-items:center;
+
+    font-size:16px;
 
     color:#374151;
 
@@ -592,12 +606,19 @@ input{
 
     margin-right:10px;
 
+    font-size:18px;
+
 }
+
+/*====================================
+        BUTTONS
+====================================*/
+
 .hero-buttons{
 
     display:flex;
 
-    gap:20px;
+    gap:18px;
 
 }
 
@@ -607,13 +628,25 @@ input{
 
     color:#ffffff;
 
-    padding:18px 34px;
+    padding:16px 30px;
+
+    border:none;
 
     border-radius:14px;
 
-    font-size:17px;
+    font-size:16px;
 
     font-weight:600;
+
+    transition:.3s;
+
+}
+
+.start-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
 
 }
 
@@ -621,17 +654,19 @@ input{
 
     background:#ffffff;
 
-    border:2px solid #dbe6ff;
-
     color:#2563eb;
 
-    padding:18px 34px;
+    border:2px solid #dbe6ff;
+
+    padding:16px 30px;
 
     border-radius:14px;
 
-    font-size:17px;
+    font-size:16px;
 
     font-weight:600;
+
+    transition:.3s;
 
 }
 
@@ -639,11 +674,17 @@ input{
 
     background:#2563eb;
 
-    color:#fff;
+    color:#ffffff;
 
 }
 
+/*====================================
+        RIGHT SECTION
+====================================*/
+
 .hero-right{
+
+    flex:0 0 48%;
 
     display:flex;
 
@@ -652,11 +693,12 @@ input{
     align-items:center;
 
 }
+
 .hero-right img{
 
     width:100%;
 
-    max-width:500px;
+    max-width:420px;
 
     height:auto;
 
