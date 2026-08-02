@@ -64,7 +64,7 @@
 
 .sidebar{
 
-    width:90px;
+    width:280px;
 
     padding:20px 10px;
 
@@ -78,7 +78,7 @@
 
 .sidebar nav li span{
 
-    display:none;
+    display:block;
 
 }
 
@@ -311,13 +311,17 @@
 
 .hero-right img{
 
-    width:260px;
+    width:220px;
+
+    margin-top:20px;
 
 }
 
 /* Quick Access */
 
 .quick-grid{
+
+    display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
@@ -327,7 +331,9 @@
 
 .quick-card{
 
-    padding:18px;
+    padding:20px 15px;
+
+    min-height:170px;
 
 }
 
@@ -384,7 +390,7 @@
 
 .hero-left h1{
 
-    font-size:28px;
+    font-size:36px;
 
 }
 
