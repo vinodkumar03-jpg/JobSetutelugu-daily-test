@@ -1,59 +1,168 @@
-/*====================================
-        JobSetu Telugu Dashboard
-======================================*/
+/*==================================
+        HERO SECTION
+==================================*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+.hero{
 
-html{
-    scroll-behavior:smooth;
-}
+    background:#ffffff;
 
-body{
+    border-radius:22px;
 
-    background:#f5f8fc;
+    padding:40px;
 
-    color:#222;
+    display:flex;
 
-    overflow-x:hidden;
+    justify-content:space-between;
 
-}
+    align-items:center;
 
-a{
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
-    text-decoration:none;
-
-    color:inherit;
+    margin-top:25px;
 
 }
 
-ul{
+.hero-left{
 
-    list-style:none;
+    width:52%;
 
 }
 
-button{
+.hero-left h1{
 
-    cursor:pointer;
+    font-size:48px;
+
+    color:#13235b;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:12px;
+
+}
+
+.hero-left h3{
+
+    color:#263238;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    margin-bottom:25px;
+
+}
+
+.hero-features{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.hero-features div{
+
+    font-size:16px;
+
+    color:#2d3748;
+
+}
+
+.hero-features i{
+
+    color:#255dff;
+
+    margin-right:8px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.start-btn{
+
+    background:#255dff;
+
+    color:#fff;
+
+    padding:16px 28px;
 
     border:none;
 
-    outline:none;
+    border-radius:12px;
 
-    font-family:'Poppins',sans-serif;
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
-img{
+.start-btn:hover{
 
-    max-width:100%;
+    transform:translateY(-3px);
 
-    display:block;
+}
+
+.paper-btn{
+
+    background:#ffffff;
+
+    color:#255dff;
+
+    border:2px solid #dbe6ff;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.paper-btn:hover{
+
+    background:#255dff;
+
+    color:#fff;
+
+}
+
+.hero-right{
+
+    width:45%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+    max-width:430px;
 
 }
 /*====================================
