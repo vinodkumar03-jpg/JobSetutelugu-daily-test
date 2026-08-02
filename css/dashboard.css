@@ -525,9 +525,9 @@ input{
 
     align-items:center;
 
-   padding:40px 50px;
+   padding:30px 40px;
 
-    min-height:420px;
+    min-height:320px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
 
@@ -539,15 +539,21 @@ input{
 
 .hero-left{
 
-    flex:1;
+    width:58%;
+
+    max-width:620px;
 
 }
 
 .hero-left h1{
 
-    font-size:48px;
+    font-size:42px;
 
-    line-height:1.15;
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#102a5c;
 
     margin-bottom:18px;
 
@@ -555,15 +561,15 @@ input{
 
 .hero-left h3{
 
-    font-size:24px;
+    font-size:18px;
+
+    line-height:1.6;
 
     font-weight:500;
 
     color:#374151;
 
-    line-height:1.6;
-
-    margin-bottom:30px;
+    margin-bottom:25px;
 
 }
 
@@ -581,7 +587,7 @@ input{
 
 .hero-features div{
 
-    font-size:16px;
+    font-size:15px;
 
     color:#374151;
 
@@ -635,11 +641,11 @@ input{
 
     border:2px solid #dbe6ff;
 
-    padding:18px 34px;
+    padding:13px 25px;
 
     border-radius:14px;
 
-    font-size:16px;
+    font-size:12px;
 
     font-weight:600;
 
@@ -669,7 +675,7 @@ input{
 
     width:100%;
 
-    max-width:320px;   /* Reduce image size */
+    max-width:300px;   /* Reduce image size */
 
     height:auto;
 
