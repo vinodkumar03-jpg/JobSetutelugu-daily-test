@@ -512,31 +512,28 @@ input{
 
 .hero{
 
-    display:flex;
+    display:grid;
 
-    justify-content:space-between;
+    grid-template-columns: 1.2fr 0.8fr;
 
     align-items:center;
 
-    gap:20px;
+    gap:40px;
 
     background:#fff;
 
     border-radius:24px;
 
-    padding:40px 45px;
+    padding:40px 50px;
 
     box-shadow:0 10px 25px rgba(0,0,0,.06);
-
-    margin-bottom:35px;
 
 }
 .hero-left{
 
-    flex:0 0 55%;
+    width:100%;
 
 }
-
 .hero-left h1{
 
     font-size:40px;
@@ -649,20 +646,16 @@ input{
 
 .hero-right{
 
-    flex:0 0 40%;
-
     display:flex;
 
-    justify-content:center;
+    justify-content:flex-end;
 
     align-items:center;
 
 }
 .hero-right img{
 
-    width:100%;
-
-    max-width:280px;
+    width:320px;
 
     height:auto;
 
