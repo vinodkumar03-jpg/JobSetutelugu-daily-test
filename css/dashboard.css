@@ -506,27 +506,31 @@ input{
     color:#777;
 
 }
-/*==================================================
-                HERO BANNER
-===================================================*/
+/*====================================
+            HERO SECTION
+====================================*/
 
 .hero{
 
     display:grid;
 
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns:1fr 1fr;
 
     align-items:center;
 
-    gap:40px;
+    gap:30px;
 
-    background:#fff;
+    background:#ffffff;
 
-    border-radius:24px;
+    border-radius:26px;
 
     padding:40px 50px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    min-height:420px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    margin-bottom:40px;
 
 }
 .hero-left{
@@ -536,25 +540,29 @@ input{
 }
 .hero-left h1{
 
-    font-size:40px;
+    font-size:58px;
 
-    line-height:1.15;
+    font-weight:700;
 
-    margin-bottom:15px;
+    color:#102b66;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
 
 }
 
 .hero-left h3{
 
-    font-size:18px;
-
-    line-height:1.6;
-
-    font-weight:500;
+    font-size:24px;
 
     color:#374151;
 
-    margin-bottom:25px;
+    line-height:1.5;
+
+    margin-bottom:35px;
+
+    font-weight:500;
 
 }
 
@@ -562,9 +570,9 @@ input{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
 
-    gap:15px;
+    gap:18px;
 
     margin-bottom:35px;
 
@@ -572,7 +580,7 @@ input{
 
 .hero-features div{
 
-    font-size:15px;
+    font-size:17px;
 
     color:#374151;
 
@@ -582,10 +590,9 @@ input{
 
     color:#2563eb;
 
-    margin-right:8px;
+    margin-right:10px;
 
 }
-
 .hero-buttons{
 
     display:flex;
@@ -598,39 +605,31 @@ input{
 
     background:#2563eb;
 
-    color:#fff;
+    color:#ffffff;
 
     padding:18px 34px;
 
     border-radius:14px;
 
-    font-size:16px;
+    font-size:17px;
 
     font-weight:600;
 
 }
 
-.start-btn:hover{
-
-    transform:translateY(-3px);
-
-    background:#1d4ed8;
-
-}
-
 .paper-btn{
 
-    background:#fff;
-
-    color:#2563eb;
+    background:#ffffff;
 
     border:2px solid #dbe6ff;
 
-    padding:13px 25px;
+    color:#2563eb;
+
+    padding:18px 34px;
 
     border-radius:14px;
 
-    font-size:12px;
+    font-size:17px;
 
     font-weight:600;
 
@@ -648,16 +647,20 @@ input{
 
     display:flex;
 
-    justify-content:flex-end;
+    justify-content:center;
 
     align-items:center;
 
 }
 .hero-right img{
 
-    width:320px;
+    width:100%;
+
+    max-width:500px;
 
     height:auto;
+
+    object-fit:contain;
 
 }
 /*==================================================
