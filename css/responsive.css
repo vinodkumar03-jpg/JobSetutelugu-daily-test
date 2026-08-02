@@ -321,9 +321,9 @@
 
 .quick-grid{
 
-    display:grid;
+    display:grid !important;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr) !important;
 
     gap:15px;
 
@@ -331,9 +331,11 @@
 
 .quick-card{
 
-    padding:20px 15px;
+    width:100%;
 
-    min-height:170px;
+    padding:18px;
+
+    min-height:180px;
 
 }
 
