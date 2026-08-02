@@ -1,24 +1,419 @@
-/* Desktop */
-@media (min-width:1200px){
+/*====================================================
+            JOBSETU RESPONSIVE CSS
+======================================================*/
+
+
+/*====================================================
+        Laptop (1200px)
+======================================================*/
+
+@media screen and (max-width:1200px){
+
+.main-content{
+
+    margin-left:270px;
+
+    padding:20px;
 
 }
 
-/* Laptop */
-@media (max-width:1199px){
+.sidebar{
+
+    width:270px;
 
 }
 
-/* Tablet */
-@media (max-width:992px){
+.hero{
+
+    padding:35px;
 
 }
 
-/* Mobile */
-@media (max-width:768px){
+.hero-left h1{
+
+    font-size:40px;
 
 }
 
-/* Small Mobile */
-@media (max-width:480px){
+.hero-left h3{
+
+    font-size:18px;
+
+}
+
+.hero-right img{
+
+    width:480px;
+
+}
+
+.quick-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+/*====================================================
+        Tablet (992px)
+======================================================*/
+
+@media screen and (max-width:992px){
+
+.sidebar{
+
+    width:90px;
+
+    padding:20px 10px;
+
+}
+
+.sidebar-logo h2{
+
+    display:none;
+
+}
+
+.sidebar nav li span{
+
+    display:none;
+
+}
+
+.sidebar nav li{
+
+    justify-content:center;
+
+}
+
+.logout button{
+
+    font-size:0;
+
+}
+
+.logout button i{
+
+    font-size:20px;
+
+}
+
+.main-content{
+
+    margin-left:90px;
+
+}
+
+.search-box{
+
+    max-width:350px;
+
+}
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-right{
+
+    justify-content:center;
+
+}
+
+.hero-right img{
+
+    width:380px;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.quick-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*====================================================
+        Mobile (768px)
+======================================================*/
+
+@media screen and (max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    left:-100%;
+
+    width:280px;
+
+    transition:.3s;
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+.main-content{
+
+    margin-left:0;
+
+    padding:15px;
+
+}
+
+.header{
+
+    height:auto;
+
+    padding:15px;
+
+}
+
+.search-box{
+
+    display:none;
+
+}
+
+.profile div{
+
+    display:none;
+
+}
+
+.notification-btn,
+
+.theme-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:25px;
+
+    min-height:auto;
+
+}
+
+.hero-left{
+
+    width:100%;
+
+}
+
+.hero-left h1{
+
+    font-size:34px;
+
+}
+
+.hero-left h3{
+
+    font-size:17px;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+    text-align:left;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.start-btn,
+
+.paper-btn{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
+.hero-right{
+
+    order:-1;
+
+}
+
+.hero-right img{
+
+    width:280px;
+
+}
+
+.quick-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.quick-card{
+
+    padding:18px;
+
+}
+
+.card-icon{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:20px;
+
+}
+
+.quick-card h3{
+
+    font-size:16px;
+
+}
+
+.quick-card p{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/*====================================================
+        Small Mobile (480px)
+======================================================*/
+
+@media screen and (max-width:480px){
+
+.header{
+
+    border-radius:15px;
+
+}
+
+.menu-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.hero{
+
+    padding:20px;
+
+}
+
+.hero-left h1{
+
+    font-size:28px;
+
+}
+
+.hero-left h3{
+
+    font-size:15px;
+
+}
+
+.hero-right img{
+
+    width:220px;
+
+}
+
+.hero-features div{
+
+    font-size:14px;
+
+}
+
+.start-btn,
+
+.paper-btn{
+
+    font-size:14px;
+
+    padding:14px 18px;
+
+}
+
+.quick-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.quick-card{
+
+    text-align:center;
+
+}
+
+.card-icon{
+
+    margin:auto;
+
+    margin-bottom:15px;
+
+}
+
+.section-header{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
 
 }
