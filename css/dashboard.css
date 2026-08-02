@@ -525,7 +525,9 @@ input{
 
     align-items:center;
 
-    padding:60px;
+   padding:40px 50px;
+
+    min-height:420px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
 
@@ -543,15 +545,11 @@ input{
 
 .hero-left h1{
 
-    font-size:54px;
-
-    color:#102a5c;
-
-    font-weight:700;
+    font-size:48px;
 
     line-height:1.15;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
@@ -657,11 +655,13 @@ input{
 
 .hero-right{
 
-    flex:1;
+    flex: 0 0 38%;
 
     display:flex;
 
     justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -669,7 +669,11 @@ input{
 
     width:100%;
 
-    max-width:420px;
+    max-width:320px;   /* Reduce image size */
+
+    height:auto;
+
+    object-fit:contain;
 
 }
 /*==================================================
