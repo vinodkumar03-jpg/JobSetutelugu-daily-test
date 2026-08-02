@@ -515,47 +515,38 @@ input{
 
 .hero{
 
-    background:#ffffff;
-
-    border-radius:24px;
-
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-   padding:30px 40px;
+    gap:20px;
 
-    min-height:320px;
+    background:#fff;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    border-radius:24px;
+
+    padding:40px 45px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
 
     margin-bottom:35px;
 
-    gap:40px;
-
 }
-
 .hero-left{
 
-    width:58%;
-
-    max-width:620px;
+    flex:0 0 55%;
 
 }
 
 .hero-left h1{
 
-    font-size:42px;
+    font-size:40px;
 
-    font-weight:700;
+    line-height:1.15;
 
-    line-height:1.2;
-
-    color:#102a5c;
-
-    margin-bottom:18px;
+    margin-bottom:15px;
 
 }
 
@@ -661,7 +652,7 @@ input{
 
 .hero-right{
 
-    flex: 0 0 38%;
+    flex:0 0 40%;
 
     display:flex;
 
@@ -670,16 +661,13 @@ input{
     align-items:center;
 
 }
-
 .hero-right img{
 
     width:100%;
 
-    max-width:300px;   /* Reduce image size */
+    max-width:280px;
 
     height:auto;
-
-    object-fit:contain;
 
 }
 /*==================================================
