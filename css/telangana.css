@@ -1,6 +1,6 @@
-/*==================================================
+/*=========================================
         TELANGANA HERO
-==================================================*/
+=========================================*/
 
 .telangana-hero{
 
@@ -8,7 +8,7 @@
 
     border-radius:25px;
 
-    padding:40px;
+    padding:45px;
 
     margin-top:30px;
 
@@ -24,7 +24,7 @@
 
     align-items:center;
 
-    gap:40px;
+    gap:50px;
 
 }
 
@@ -38,11 +38,11 @@
 
     display:inline-block;
 
-    background:#e8f1ff;
+    background:#edf4ff;
 
     color:#2563eb;
 
-    padding:10px 20px;
+    padding:8px 18px;
 
     border-radius:30px;
 
@@ -58,11 +58,13 @@
 
     font-size:48px;
 
-    color:#0f172a;
+    color:#102b66;
 
-    margin-bottom:20px;
+    font-weight:700;
 
     line-height:1.2;
+
+    margin-bottom:20px;
 
 }
 
@@ -70,7 +72,7 @@
 
     font-size:18px;
 
-    color:#64748b;
+    color:#555;
 
     line-height:1.8;
 
@@ -90,11 +92,11 @@
 
     background:#2563eb;
 
-    color:#ffffff;
+    color:#fff;
 
     border:none;
 
-    padding:16px 28px;
+    padding:16px 30px;
 
     border-radius:12px;
 
@@ -110,9 +112,9 @@
 
 .latest-btn:hover{
 
-    background:#1d4ed8;
-
     transform:translateY(-3px);
+
+    background:#1d4ed8;
 
 }
 
@@ -124,7 +126,7 @@
 
     border:2px solid #2563eb;
 
-    padding:16px 28px;
+    padding:16px 30px;
 
     border-radius:12px;
 
@@ -158,10 +160,8 @@
 
 .hero-image img{
 
-    width:420px;
+    width:100%;
 
-    max-width:100%;
-
-    height:auto;
+    max-width:450px;
 
 }
