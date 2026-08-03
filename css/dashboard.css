@@ -327,12 +327,11 @@ input{
 
     align-items:center;
 
-    gap:20px;
+    gap:18px;
 
     flex:1;
 
 }
-
 .menu-btn{
 
     width:50px;
@@ -348,7 +347,75 @@ input{
     font-size:20px;
 
 }
+/*====================================
+            HEADER LOGO
+====================================*/
 
+.header-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-right:10px;
+
+}
+
+.header-logo img{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.header-logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.1;
+
+}
+
+.header-logo-text h3{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.header-logo-text .job{
+
+    color:#2563eb;
+
+}
+
+.header-logo-text .setu{
+
+    color:#f97316;
+
+}
+
+.header-logo-text span{
+
+    font-size:13px;
+
+    color:#666;
+
+    font-weight:500;
+
+}
 .menu-btn:hover{
 
     background:#2563eb;
@@ -361,11 +428,13 @@ input{
 
     flex:1;
 
-    max-width:750px;
+    max-width:700px;
 
     height:50px;
 
     background:#f7f9fc;
+
+    border:2px solid transparent;
 
     border-radius:30px;
 
@@ -374,6 +443,14 @@ input{
     align-items:center;
 
     padding:0 20px;
+
+    transition:.3s;
+
+}
+
+.search-box:hover{
+
+    border-color:#2563eb;
 
 }
 
@@ -400,7 +477,6 @@ input{
     font-size:15px;
 
 }
-
 .header-right{
 
     display:flex;
