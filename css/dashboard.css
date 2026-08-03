@@ -122,22 +122,31 @@ input{
 
     gap:15px;
 
-    padding:15px 18px;
-
-    color:#4b5563;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    transition:.3s;
-
     width:100%;
 
     height:100%;
 
+    padding:15px 18px;
+
+    color:inherit;
+
+    text-decoration:none;
+
 }
 
+.quick-card{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.quick-card:hover{
+
+    color:inherit;
+
+}
 .sidebar nav li a i{
 
     width:22px;
