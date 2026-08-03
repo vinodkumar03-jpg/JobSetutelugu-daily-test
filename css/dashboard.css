@@ -860,3 +860,136 @@ input{
     background:#2563eb;
 
 }
+/*====================================
+        EXAM SELECTOR
+====================================*/
+
+.exam-selector{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.section-header h2{
+
+    font-size:34px;
+
+    color:#102b66;
+
+    font-weight:700;
+
+}
+
+.section-header a{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.exam-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+}
+
+.exam-btn{
+
+    background:#f8fbff;
+
+    border:2px solid #e5efff;
+
+    border-radius:16px;
+
+    padding:18px 15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+}
+
+.exam-btn i{
+
+    font-size:28px;
+
+    color:#2563eb;
+
+}
+
+.exam-btn:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+.exam-btn:hover i{
+
+    color:#ffffff;
+
+}
+
+.exam-btn.active{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.exam-btn.active i{
+
+    color:#ffffff;
+
+}
