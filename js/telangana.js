@@ -110,14 +110,10 @@ if (latestBtn) {
 
     latestBtn.addEventListener("click", () => {
 
-        document.querySelector(".latest-jobs").scrollIntoView({
-
+        document.getElementById("latest-jobs").scrollIntoView({
             behavior: "smooth"
 
         });
-
-    });
-
 }
 
 const paperBtn = document.querySelector(".paper-btn");
