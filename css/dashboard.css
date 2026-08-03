@@ -36,6 +36,10 @@ img{
 
     display:block;
 
+    user-select:none;
+
+    -webkit-user-drag:none;
+
 }
 
 ul{
@@ -105,36 +109,70 @@ input{
                     SIDEBAR
 ==================================================*/
 
-.sidebar{
+.sidebar nav li{
+    border-radius:14px;
+    overflow:hidden;
+}
 
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:300px;
-
-    height:100vh;
-
-    background:#ffffff;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
+.sidebar nav li a{
 
     display:flex;
 
-    flex-direction:column;
+    align-items:center;
 
-    justify-content:space-between;
+    gap:15px;
 
-    padding:25px 20px;
+    padding:15px 18px;
 
-    overflow:hidden;
+    color:#4b5563;
 
-    z-index:999;
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    width:100%;
+
+    height:100%;
 
 }
 
+.sidebar nav li a i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#2563eb;
+
+}
+
+.sidebar nav li:hover a{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+    transform:translateX(4px);
+
+}
+
+.sidebar nav li.active a{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.sidebar nav li.active a i{
+
+    color:#fff;
+
+}
 
 /*==================================================
                     LOGO
@@ -462,25 +500,9 @@ input{
 
 .search-box{
 
-    flex:1;
+    width:100%;
 
     max-width:700px;
-
-    height:50px;
-
-    background:#f7f9fc;
-
-    border:2px solid transparent;
-
-    border-radius:30px;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:0 20px;
-
-    transition:.3s;
 
 }
 
@@ -789,7 +811,11 @@ input{
     color:#ffffff;
 
 }
+button{
 
+    user-select:none;
+
+}
 /*====================================
         RIGHT SECTION
 ====================================*/
@@ -806,15 +832,9 @@ input{
 
 .hero-right img{
 
-    width:600px;
+    width:100%;
 
-    max-width:none;
-
-    height:auto;
-
-    object-fit:contain;
-
-    transition:0.3s;
+    max-width:600px;
 
 }
 /*==================================================
@@ -867,27 +887,15 @@ input{
 
 .quick-card{
 
-    background:#ffffff;
+    text-decoration:none;
 
-    border-radius:20px;
-
-    padding:25px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
-
-    transition:.3s;
-
-    cursor:pointer;
-
-    position:relative;
+    color:inherit;
 
 }
 
 .quick-card:hover{
 
-    transform:translateY(-6px);
-
-    box-shadow:0 15px 35px rgba(37,99,235,.12);
+    color:inherit;
 
 }
 
@@ -1103,5 +1111,10 @@ input{
 .exam-btn.active i{
 
     color:#ffffff;
+
+}
+*{
+
+    transition:.2s ease;
 
 }
