@@ -84,7 +84,7 @@
 
 .sidebar nav li{
 
-    justify-content:center;
+    justify-content:flex-start;
 
 }
 
@@ -134,7 +134,9 @@
 
 .hero-right img{
 
-    width:380px;
+    width:260px;
+
+    max-width:100%;
 
 }
 
