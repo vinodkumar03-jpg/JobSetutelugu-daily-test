@@ -371,3 +371,180 @@
     font-weight:600;
 
 }
+/*====================================
+        LATEST JOBS
+====================================*/
+
+.latest-jobs{
+
+    margin-top:35px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.section-header h2{
+
+    font-size:34px;
+
+    color:#102b66;
+
+}
+
+.section-header a{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.job-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.job-card{
+
+    border:2px solid #e6eeff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    position:relative;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.15);
+
+}
+
+.job-tag{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.police{
+
+    background:#ef4444;
+
+}
+
+.dsc{
+
+    background:#f59e0b;
+
+}
+
+.tsrtc{
+
+    background:#2563eb;
+
+}
+
+.job-card h3{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    color:#102b66;
+
+}
+
+.job-card p{
+
+    margin:12px 0;
+
+    color:#666;
+
+}
+
+.job-info{
+
+    margin:18px 0;
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+.job-card button{
+
+    width:100%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.job-card button:hover{
+
+    background:#1d4ed8;
+
+}
