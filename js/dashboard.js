@@ -86,8 +86,7 @@ if (notificationBtn) {
 
     notificationBtn.addEventListener("click", () => {
 
-        alert("No new notifications.");
-
+        alert("No new notifications available.");
     });
 
 }
