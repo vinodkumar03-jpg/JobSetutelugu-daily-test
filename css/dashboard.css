@@ -94,7 +94,7 @@ input{
 
     flex:1;
 
-    margin-left:300px;
+    margin-left:260px;
 
     padding:25px;
 
@@ -108,7 +108,11 @@ input{
 /*==================================================
                     SIDEBAR
 ==================================================*/
+.sidebar{
 
+    width:260px;
+
+}
 .sidebar nav li{
     border-radius:14px;
     overflow:hidden;
@@ -126,7 +130,7 @@ input{
 
     height:100%;
 
-    padding:15px 18px;
+    padding:14px 15px;
 
     color:inherit;
 
@@ -197,7 +201,7 @@ input{
 
 .sidebar-logo img{
 
-    width:110px;
+    width:100px;
 
     display:block;
 
