@@ -73,12 +73,14 @@ input{
 }
 
 /*==================================================
-        DASHBOARD LAYOUT
-===================================================*/
+                DASHBOARD LAYOUT
+==================================================*/
 
 .dashboard{
 
     display:flex;
+
+    width:100%;
 
     min-height:100vh;
 
@@ -92,11 +94,16 @@ input{
 
     padding:25px;
 
+    width:calc(100% - 300px);
+
+    overflow-x:hidden;
+
 }
 
+
 /*==================================================
-        SIDEBAR
-===================================================*/
+                    SIDEBAR
+==================================================*/
 
 .sidebar{
 
@@ -120,31 +127,34 @@ input{
 
     justify-content:space-between;
 
-    padding:30px 20px;
+    padding:25px 20px;
+
+    overflow:hidden;
 
     z-index:999;
 
 }
 
+
 /*==================================================
-        LOGO
-===================================================*/
+                    LOGO
+==================================================*/
 
 .sidebar-logo{
 
     text-align:center;
 
-    margin-bottom:30px;
+    margin-bottom:20px;
 
 }
 
 .sidebar-logo img{
 
-    width:120px;
+    width:110px;
 
-    margin:auto;
+    display:block;
 
-    margin-bottom:15px;
+    margin:0 auto 12px;
 
 }
 
@@ -153,6 +163,8 @@ input{
     font-size:28px;
 
     font-weight:700;
+
+    line-height:1.2;
 
 }
 
@@ -172,17 +184,18 @@ input{
 
     display:block;
 
-    margin-top:4px;
-
     font-size:18px;
 
     color:#555;
 
+    margin-top:6px;
+
 }
 
+
 /*==================================================
-        NAVIGATION
-===================================================*/
+                    NAVIGATION
+==================================================*/
 
 .sidebar nav{
 
@@ -192,9 +205,19 @@ input{
 
     margin-top:10px;
 
+    padding-right:5px;
+
 }
 
+/* Remove default list styles */
+
 .sidebar nav ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
 
     display:flex;
 
@@ -216,19 +239,23 @@ input{
 
     border-radius:14px;
 
+    cursor:pointer;
+
     transition:.3s;
 
-    font-size:15px;
+    color:#4b5563;
+
+    font-size:16px;
 
     font-weight:500;
-
-    color:#4b5563;
 
 }
 
 .sidebar nav li i{
 
-    width:24px;
+    width:22px;
+
+    text-align:center;
 
     font-size:18px;
 
@@ -242,7 +269,7 @@ input{
 
     color:#2563eb;
 
-    transform:translateX(5px);
+    transform:translateX(4px);
 
 }
 
@@ -260,13 +287,14 @@ input{
 
 }
 
+
 /*==================================================
-        LOGOUT BUTTON
-===================================================*/
+                LOGOUT
+==================================================*/
 
 .logout{
 
-    margin-top:25px;
+    margin-top:20px;
 
 }
 
@@ -274,17 +302,25 @@ input{
 
     width:100%;
 
-    height:52px;
+    height:54px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
 
     background:#ef4444;
 
     color:#ffffff;
 
-    border-radius:14px;
-
     font-size:16px;
 
     font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
