@@ -476,3 +476,12 @@
 }
 
 }
+@media(max-width:768px){
+
+.job-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
