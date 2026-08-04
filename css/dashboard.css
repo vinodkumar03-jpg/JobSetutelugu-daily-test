@@ -1004,136 +1004,31 @@ input{
     transition:.2s ease;
 
 }
-/*==================================================
-            ACCOUNT SIDEBAR
-==================================================*/
+/*====================================
+        MAGIC MENU
+====================================*/
 
-.account-sidebar{
+.magic-menu{
 
     position:fixed;
 
-    top:0;
+    top:90px;
 
-    left:-340px;          /* or right:-340px if you keep it on the right */
-
-    width:320px;
-
-    height:100vh;
-
-    background:#f4f7fc;
-
-    box-shadow:10px 0 30px rgba(0,0,0,.12);
-
-    z-index:2000;
-
-    transition:.35s ease;
+    left:20px;
 
     display:flex;
 
     flex-direction:column;
 
-    padding:25px;
+    gap:15px;
 
-    box-sizing:border-box;
-
-}
-.account-sidebar.active{
-
-    left:0;
+    z-index:999;
 
 }
 
-.account-header{
+.magic-item{
 
-    display:flex;
-
-    justify-content:flex-end;
-
-    margin-bottom:30px;
-
-}
-
-.close-account{
-
-    width:42px;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#edf4ff;
-
-    color:#2563eb;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-}
-
-.close-account:hover{
-
-    background:#2563eb;
-
-    color:#ffffff;
-
-}
-
-.account-sidebar ul{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:40px 0 0;
-
-}
-
-.account-sidebar li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    padding:16px;
-
-    border-radius:12px;
-
-    margin-bottom:12px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.account-sidebar li:hover{
-
-    background:#edf4ff;
-
-    color:#2563eb;
-
-}
-
-.account-sidebar li i{
-
-    width:24px;
-
-    text-align:center;
-
-    color:#2563eb;
-
-}
-
-.logout-btn{
-
-    margin-top:auto;
-
-    width:100%;
+    width:240px;
 
     height:55px;
 
@@ -1141,51 +1036,58 @@ input{
 
     border-radius:14px;
 
-    background:#ef4444;
+    background:#ffffff;
 
-    color:#fff;
+    display:flex;
 
-    font-size:18px;
+    align-items:center;
 
-    font-weight:600;
+    gap:15px;
+
+    padding:0 20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
     cursor:pointer;
 
-}
-.logout-btn:hover{
+    font-size:16px;
 
-    background:#dc2626;
-
-}
-
-..overlay{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0,0,0,.35);
+    font-weight:500;
 
     opacity:0;
 
-    visibility:hidden;
+    transform:translateX(-40px);
 
-    transition:.3s;
-
-    z-index:1500;
+    transition:.35s;
 
 }
 
-.overlay.active{
+.magic-item.show{
 
     opacity:1;
 
-    visibility:visible;
+    transform:translateX(0);
+
+}
+
+.magic-item i{
+
+    color:#2563eb;
+
+    font-size:18px;
+
+}
+
+.magic-item.logout{
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+}
+
+.magic-item.logout i{
+
+    color:#ffffff;
 
 }
