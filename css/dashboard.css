@@ -1014,15 +1014,15 @@ input{
 
     top:0;
 
-    right:-340px;
+    left:-340px;          /* or right:-340px if you keep it on the right */
 
     width:320px;
 
     height:100vh;
 
-    background:#ffffff;
+    background:#f4f7fc;
 
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+    box-shadow:10px 0 30px rgba(0,0,0,.12);
 
     z-index:2000;
 
@@ -1034,8 +1034,9 @@ input{
 
     padding:25px;
 
-}
+    box-sizing:border-box;
 
+}
 .account-sidebar.active{
 
     left:0;
@@ -1086,13 +1087,7 @@ input{
 
     padding:0;
 
-    margin:30px 0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
+    margin:40px 0 0;
 
 }
 
@@ -1102,19 +1097,17 @@ input{
 
     align-items:center;
 
-    gap:15px;
+    gap:18px;
 
     padding:16px;
 
-    border-radius:14px;
+    border-radius:12px;
+
+    margin-bottom:12px;
 
     cursor:pointer;
 
     transition:.3s;
-
-    font-size:16px;
-
-    font-weight:500;
 
 }
 
@@ -1138,7 +1131,7 @@ input{
 
 .logout-btn{
 
-    margin-top:40px;
+    margin-top:auto;
 
     width:100%;
 
@@ -1159,7 +1152,6 @@ input{
     cursor:pointer;
 
 }
-
 .logout-btn:hover{
 
     background:#dc2626;
