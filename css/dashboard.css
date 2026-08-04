@@ -84,11 +84,47 @@ input{
 
     display:flex;
 
-    width:100%;
-
     min-height:100vh;
 
+    background:#f4f7fc;
+
 }
+
+/*==================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px 15px;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+}
+
+/*==================================================
+                MAIN CONTENT
+==================================================*/
 
 .main-content{
 
@@ -96,26 +132,42 @@ input{
 
     margin-left:260px;
 
-    padding:25px;
+    width:calc(100% - 260px);
 
-    width:calc(100% - 300px);
+    padding:25px;
 
     overflow-x:hidden;
 
 }
 
-
 /*==================================================
-                    SIDEBAR
+                SIDEBAR MENU
 ==================================================*/
-.sidebar{
 
-    width:260px;
+.sidebar nav{
+
+    flex:1;
+
+    margin-top:20px;
 
 }
+
+.sidebar nav ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
 .sidebar nav li{
+
     border-radius:14px;
+
     overflow:hidden;
+
 }
 
 .sidebar nav li a{
@@ -128,17 +180,61 @@ input{
 
     width:100%;
 
-    height:100%;
+    padding:14px 16px;
 
-    padding:14px 15px;
-
-    color:inherit;
+    color:#4b5563;
 
     text-decoration:none;
 
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
 }
 
+.sidebar nav li a i{
+
+    width:22px;
+
+    text-align:center;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+}
+
+.sidebar nav li:hover a{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+}
+
+.sidebar nav li.active a{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.sidebar nav li.active a i{
+
+    color:#ffffff;
+
+}
+
+/*==================================================
+                QUICK CARD LINKS
+==================================================*/
+
 .quick-card{
+
+    display:block;
 
     text-decoration:none;
 
@@ -151,42 +247,6 @@ input{
     color:inherit;
 
 }
-.sidebar nav li a i{
-
-    width:22px;
-
-    text-align:center;
-
-    font-size:18px;
-
-    color:#2563eb;
-
-}
-
-.sidebar nav li:hover a{
-
-    background:#edf4ff;
-
-    color:#2563eb;
-
-    transform:translateX(4px);
-
-}
-
-.sidebar nav li.active a{
-
-    background:#2563eb;
-
-    color:#fff;
-
-}
-
-.sidebar nav li.active a i{
-
-    color:#fff;
-
-}
-
 /*==================================================
                     LOGO
 ==================================================*/
@@ -388,23 +448,25 @@ input{
 
 .header{
 
+    width:100%;
+
     height:80px;
 
     background:#ffffff;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:0 30px;
+    padding:0 25px;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    align-items:center;
 
-    margin-bottom:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+
+    margin-bottom:25px;
 
 }
 
