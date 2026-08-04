@@ -109,18 +109,15 @@ input{
 
 .main-content{
 
-    flex:1;
+    width:100%;
 
-    margin-left:260px;
-
-    width:calc(100% - 260px);
+    margin:0;
 
     padding:25px;
 
-    overflow-x:hidden;
+    transition:.35s ease;
 
 }
-
 /*==================================================
                 SIDEBAR MENU
 ==================================================*/
@@ -1041,7 +1038,7 @@ input{
 
 .account-sidebar.active{
 
-    right:0;
+    left:0;
 
 }
 
@@ -1169,11 +1166,17 @@ input{
 
 }
 
-.overlay{
+..overlay{
 
     position:fixed;
 
-    inset:0;
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
 
     background:rgba(0,0,0,.35);
 
