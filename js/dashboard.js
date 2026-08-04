@@ -3,7 +3,7 @@
 // ======================================
 
 const menuBtn = document.querySelector(".menu-btn");
-
+const magicItems = document.querySelectorAll(".magic-item");
 const pageContent = document.querySelector(".page-content");
 
 let menuOpen = false;
