@@ -1,33 +1,35 @@
 // ======================================
-// ACCOUNT SIDEBAR
+// MAGIC MENU
 // ======================================
 
 const menuBtn = document.querySelector(".menu-btn");
-const accountSidebar = document.querySelector(".account-sidebar");
-const closeBtn = document.querySelector(".close-account");
-const overlay = document.querySelector(".overlay");
+const magicItems = document.querySelectorAll(".magic-item");
 
-menuBtn.addEventListener("click",()=>{
+let menuOpen = false;
 
-    accountSidebar.classList.add("active");
-    overlay.classList.add("active");
+menuBtn.addEventListener("click", () => {
+
+    menuOpen = !menuOpen;
+
+    magicItems.forEach((item, index) => {
+
+        setTimeout(() => {
+
+            if (menuOpen) {
+
+                item.classList.add("show");
+
+            } else {
+
+                item.classList.remove("show");
+
+            }
+
+        }, index * 120);
+
+    });
 
 });
-
-closeBtn.addEventListener("click",()=>{
-
-    accountSidebar.classList.remove("active");
-    overlay.classList.remove("active");
-
-});
-
-overlay.addEventListener("click",()=>{
-
-    accountSidebar.classList.remove("active");
-    overlay.classList.remove("active");
-
-});
-
 
 // ======================================
 // THEME
@@ -55,11 +57,13 @@ document.querySelector(".notification-btn").onclick=()=>{
 // LOGOUT
 // ======================================
 
-document.querySelector(".logout-btn").onclick=()=>{
+const logoutBtn = document.querySelector(".magic-item.logout");
 
-    if(confirm("Are you sure you want to logout?")){
+logoutBtn.onclick = () => {
 
-        window.location.href="index.html";
+    if (confirm("Are you sure you want to logout?")) {
+
+        window.location.href = "index.html";
 
     }
 
