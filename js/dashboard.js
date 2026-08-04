@@ -12,6 +12,16 @@ menuBtn.addEventListener("click", () => {
 
     menuOpen = !menuOpen;
 
+    if (menuOpen) {
+
+        pageContent.classList.add("menu-open");
+
+    } else {
+
+        pageContent.classList.remove("menu-open");
+
+    }
+
     magicItems.forEach((item, index) => {
 
         setTimeout(() => {
@@ -36,23 +46,33 @@ menuBtn.addEventListener("click", () => {
 // THEME
 // ======================================
 
-document.querySelector(".theme-btn").onclick=()=>{
+const themeBtn = document.querySelector(".theme-btn");
 
-    alert("Dark Mode Coming Soon");
+if (themeBtn) {
 
-};
+    themeBtn.onclick = () => {
 
+        alert("Dark Mode Coming Soon");
+
+    };
+
+}
 
 // ======================================
 // NOTIFICATIONS
 // ======================================
 
-document.querySelector(".notification-btn").onclick=()=>{
+const notificationBtn = document.querySelector(".notification-btn");
 
-    alert("No New Notifications");
+if (notificationBtn) {
 
-};
+    notificationBtn.onclick = () => {
 
+        alert("No New Notifications");
+
+    };
+
+}
 
 // ======================================
 // LOGOUT
@@ -60,12 +80,16 @@ document.querySelector(".notification-btn").onclick=()=>{
 
 const logoutBtn = document.querySelector(".magic-item.logout");
 
-logoutBtn.onclick = () => {
+if (logoutBtn) {
 
-    if (confirm("Are you sure you want to logout?")) {
+    logoutBtn.onclick = () => {
 
-        window.location.href = "index.html";
+        if (confirm("Are you sure you want to logout?")) {
 
-    }
+            window.location.href = "index.html";
 
-};
+        }
+
+    };
+
+}
