@@ -82,7 +82,7 @@ input{
 
 .dashboard{
 
-    display:flex;
+    width:100%;
 
     min-height:100vh;
 
@@ -90,37 +90,18 @@ input{
 
 }
 
-/*==================================================
-                    SIDEBAR
-==================================================*/
+.main-content{
 
-.sidebar{
+    width:100%;
 
-    position:fixed;
+    padding:25px 40px;
 
-    top:0;
+    margin:0 auto;
 
-    left:0;
-
-    width:260px;
-
-    height:100vh;
-
-    background:#ffffff;
-
-    border-right:1px solid #e5e7eb;
-
-    display:flex;
-
-    flex-direction:column;
-
-    padding:20px 15px;
-
-    overflow-y:auto;
-
-    z-index:1000;
+    max-width:1600px;
 
 }
+
 
 /*==================================================
                 MAIN CONTENT
@@ -251,33 +232,6 @@ input{
                     LOGO
 ==================================================*/
 
-.sidebar-logo{
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-}
-
-.sidebar-logo img{
-
-    width:100px;
-
-    display:block;
-
-    margin:0 auto 12px;
-
-}
-
-.sidebar-logo h2{
-
-    font-size:28px;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-}
 
 .job{
 
@@ -300,101 +254,6 @@ input{
     color:#555;
 
     margin-top:6px;
-
-}
-
-
-/*==================================================
-                    NAVIGATION
-==================================================*/
-
-.sidebar nav{
-
-    flex:1;
-
-    overflow-y:auto;
-
-    margin-top:10px;
-
-    padding-right:5px;
-
-}
-
-/* Remove default list styles */
-
-.sidebar nav ul{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-.sidebar nav li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:15px 18px;
-
-    border-radius:14px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    color:#4b5563;
-
-    font-size:16px;
-
-    font-weight:500;
-
-}
-
-.sidebar nav li i{
-
-    width:22px;
-
-    text-align:center;
-
-    font-size:18px;
-
-    color:#2563eb;
-
-}
-
-.sidebar nav li:hover{
-
-    background:#edf4ff;
-
-    color:#2563eb;
-
-    transform:translateX(4px);
-
-}
-
-.sidebar nav li.active{
-
-    background:#2563eb;
-
-    color:#ffffff;
-
-}
-
-.sidebar nav li.active i{
-
-    color:#ffffff;
 
 }
 
@@ -450,8 +309,6 @@ input{
 
     height:80px;
 
-    width:100%;
-
     background:#ffffff;
 
     border-radius:18px;
@@ -466,7 +323,7 @@ input{
 
     box-shadow:0 8px 20px rgba(0,0,0,.05);
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 
@@ -482,53 +339,55 @@ input{
 
 }
 
-.header-logo{
+/* Brand */
+
+.header-brand{
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
-
-    flex-shrink:0;
+    gap:12px;
 
 }
 
-.header-logo img{
+.header-brand img{
 
-    width:45px;
+    width:48px;
 
-    height:45px;
+    height:48px;
 
     border-radius:50%;
 
 }
 
-.header-logo-text h3{
+.brand-text h2{
 
-    font-size:22px;
+    font-size:24px;
 
     line-height:1;
 
 }
 
-.header-logo-text span{
+.brand-text span{
 
-    font-size:13px;
+    font-size:14px;
 
     color:#666;
 
 }
 
+/* Search */
+
 .search-box{
 
     flex:1;
 
-    height:50px;
-
     max-width:700px;
 
-    background:#f5f7fb;
+    height:50px;
+
+    background:#f7f9fc;
 
     border-radius:30px;
 
@@ -538,6 +397,8 @@ input{
 
     padding:0 20px;
 
+    margin-left:20px;
+
 }
 
 .search-box input{
@@ -546,11 +407,11 @@ input{
 
     border:none;
 
-    background:transparent;
-
     outline:none;
 
-    margin-left:12px;
+    background:transparent;
+
+    margin-left:10px;
 
     font-size:15px;
 
