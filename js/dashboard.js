@@ -1,115 +1,66 @@
-// ==========================================
-// JobSetu Telugu Dashboard JavaScript
-// ==========================================
-
-// ================================
-// Mobile Sidebar Toggle
-// ================================
+// ======================================
+// ACCOUNT SIDEBAR
+// ======================================
 
 const menuBtn = document.querySelector(".menu-btn");
-const sidebar = document.querySelector(".sidebar");
+const accountSidebar = document.querySelector(".account-sidebar");
+const closeBtn = document.querySelector(".close-account");
+const overlay = document.querySelector(".overlay");
 
-if (menuBtn && sidebar) {
+menuBtn.addEventListener("click",()=>{
 
-    menuBtn.addEventListener("click", () => {
+    accountSidebar.classList.add("active");
+    overlay.classList.add("active");
 
-        sidebar.classList.toggle("active");
+});
 
-    });
+closeBtn.addEventListener("click",()=>{
 
-}
+    accountSidebar.classList.remove("active");
+    overlay.classList.remove("active");
+
+});
+
+overlay.addEventListener("click",()=>{
+
+    accountSidebar.classList.remove("active");
+    overlay.classList.remove("active");
+
+});
 
 
-// ================================
-// Close Sidebar when clicking outside
-// ================================
+// ======================================
+// THEME
+// ======================================
 
-document.addEventListener("click", (e) => {
+document.querySelector(".theme-btn").onclick=()=>{
 
-    if (
-        window.innerWidth <= 768 &&
-        sidebar.classList.contains("active") &&
-        !sidebar.contains(e.target) &&
-        !menuBtn.contains(e.target)
-    ) {
+    alert("Dark Mode Coming Soon");
 
-        sidebar.classList.remove("active");
+};
+
+
+// ======================================
+// NOTIFICATIONS
+// ======================================
+
+document.querySelector(".notification-btn").onclick=()=>{
+
+    alert("No New Notifications");
+
+};
+
+
+// ======================================
+// LOGOUT
+// ======================================
+
+document.querySelector(".logout-btn").onclick=()=>{
+
+    if(confirm("Are you sure you want to logout?")){
+
+        window.location.href="index.html";
 
     }
 
-});
-
-
-// ================================
-// Active Sidebar Menu
-// ================================
-
-const menuItems = document.querySelectorAll(".sidebar nav li");
-
-menuItems.forEach(item => {
-
-    item.addEventListener("click", () => {
-
-        menuItems.forEach(i => i.classList.remove("active"));
-
-        item.classList.add("active");
-
-    });
-
-});
-
-
-// ================================
-// Theme Button (Coming Soon)
-// ================================
-
-const themeBtn = document.querySelector(".theme-btn");
-
-if (themeBtn) {
-
-    themeBtn.addEventListener("click", () => {
-
-        alert("Dark Mode will be available soon.");
-
-    });
-
-}
-
-
-// ================================
-// Notification Button
-// ================================
-
-const notificationBtn = document.querySelector(".notification-btn");
-
-if (notificationBtn) {
-
-    notificationBtn.addEventListener("click", () => {
-
-        alert("No new notifications available.");
-    });
-
-}
-
-
-// ================================
-// Logout Button
-// ================================
-
-const logoutBtn = document.querySelector(".logout button");
-
-if (logoutBtn) {
-
-    logoutBtn.addEventListener("click", () => {
-
-        const confirmLogout = confirm("Are you sure you want to logout?");
-
-        if (confirmLogout) {
-
-            window.location.href = "index.html";
-
-        }
-
-    });
-
-}
+};
