@@ -989,3 +989,190 @@ input{
     transition:.2s ease;
 
 }
+/*==================================================
+            ACCOUNT SIDEBAR
+==================================================*/
+
+.account-sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-340px;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+    z-index:2000;
+
+    transition:.35s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:25px;
+
+}
+
+.account-sidebar.active{
+
+    right:0;
+
+}
+
+.account-header{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-bottom:30px;
+
+}
+
+.close-account{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.close-account:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.account-sidebar ul{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    flex:1;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.account-sidebar li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.account-sidebar li:hover{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+}
+
+.account-sidebar li i{
+
+    width:24px;
+
+    text-align:center;
+
+    color:#2563eb;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:1500;
+
+}
+
+.overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
