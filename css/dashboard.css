@@ -1091,3 +1091,18 @@ input{
     color:#ffffff;
 
 }
+/*=========================================
+        PAGE CONTENT MOVE
+=========================================*/
+
+.page-content{
+
+    transition:0.35s ease;
+
+}
+
+.page-content.menu-open{
+
+    transform:translateX(260px);
+
+}
