@@ -1027,11 +1027,21 @@ input{
 }
 
 .magic-item{
-
+    width:240px;
+    height:55px;
+    border:none;
+    border-radius:14px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:0 20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    cursor:pointer;
+    font-size:16px;
+    font-weight:500;
     opacity:0;
-
     transform:translateX(-40px);
-
     transition:.35s;
 
 }
