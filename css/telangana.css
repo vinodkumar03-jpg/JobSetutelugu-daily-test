@@ -6,13 +6,13 @@
 
     background:#ffffff;
 
-    border-radius:0px;
+    border-radius:25px;
 
-    padding:15px;
+    padding:40px 50px;
 
-    margin-top:0px;
+    margin-top:10px;
 
-    box-shadow:0 0px 0px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
 
 }
 
@@ -22,15 +22,17 @@
 
     justify-content:space-between;
 
-    align-items:center;
+    align-items:flex-start;
 
-    gap:0px;
+    gap:50px;
 
 }
 
 .hero-text{
 
     flex:1;
+
+    padding-top:10px;
 
 }
 
@@ -42,41 +44,41 @@
 
     color:#2563eb;
 
-    padding:8px 18px;
+    padding:10px 22px;
 
-    border-radius:25px;
+    border-radius:30px;
 
     font-size:15px;
 
     font-weight:600;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
 }
 
 .hero-text h1{
 
-    font-size:48px;
+    font-size:58px;
 
     color:#102b66;
 
-    font-weight:700;
+    font-weight:800;
 
-    line-height:1.2;
+    line-height:1.15;
 
-    margin-bottom:15px;
+    margin:0 0 25px;
 
 }
 
 .hero-text p{
 
-    font-size:18px;
+    font-size:19px;
 
     color:#555;
 
     line-height:1.8;
 
-    margin-bottom:20px;
+    margin-bottom:35px;
 
 }
 
@@ -84,38 +86,39 @@
 
     display:flex;
 
-    gap:10px;
+    gap:18px;
+
+    flex-wrap:wrap;
 
 }
 
 .latest-btn{
 
-    background:#ffffff;
+    background:#2563eb;
 
-    color:#2563eb;
+    color:#ffffff;
 
-    border:2px solid #2563eb;
+    border:none;
 
-    padding:16px 30px;
+    padding:16px 34px;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    font-size:16px;
+    font-size:17px;
 
     font-weight:600;
 
     cursor:pointer;
 
     transition:.3s;
+
 }
 
 .latest-btn:hover{
 
     transform:translateY(-3px);
 
-   background:#2563eb;
-
-    color:#ffffff;
+    background:#1d4ed8;
 
 }
 
@@ -127,11 +130,11 @@
 
     border:2px solid #2563eb;
 
-    padding:16px 30px;
+    padding:16px 34px;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    font-size:16px;
+    font-size:17px;
 
     font-weight:600;
 
@@ -157,13 +160,17 @@
 
     justify-content:center;
 
+    align-items:center;
+
 }
 
 .hero-image img{
 
     width:100%;
 
-    max-width:450px;
+    max-width:500px;
+
+    display:block;
 
 }
 /*=========================================
