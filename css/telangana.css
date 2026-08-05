@@ -6,9 +6,9 @@
 
     background:#ffffff;
 
-    border-radius:25px;
+    border-radius:0px;
 
-    padding:40px;
+    padding:15px;
 
     margin-top:0px;
 
@@ -24,7 +24,7 @@
 
     align-items:center;
 
-    gap:30px;
+    gap:15px;
 
 }
 
@@ -44,7 +44,7 @@
 
     padding:8px 18px;
 
-    border-radius:30px;
+    border-radius:25px;
 
     font-size:15px;
 
@@ -90,7 +90,11 @@
 
 .latest-btn{
 
-    border:none;
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
 
     padding:16px 30px;
 
@@ -103,14 +107,15 @@
     cursor:pointer;
 
     transition:.3s;
-
 }
 
 .latest-btn:hover{
 
     transform:translateY(-3px);
 
-    background:#1d4ed8;
+   background:#2563eb;
+
+    color:#ffffff;
 
 }
 
