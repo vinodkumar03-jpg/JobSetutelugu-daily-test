@@ -343,6 +343,10 @@
     cursor:pointer;
 
     transition:.3s;
+        
+    text-decoration:none;
+        
+    color:inherit;
 
 }
 
