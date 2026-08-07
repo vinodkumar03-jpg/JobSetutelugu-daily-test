@@ -135,3 +135,176 @@
     max-width:480px;
 
 }
+/*==================================================
+                EXPLORE TGPSC
+==================================================*/
+
+.explore-tgpsc{
+
+    margin-top:50px;
+
+}
+
+.explore-tgpsc .section-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.explore-tgpsc .section-header h2{
+
+    font-size:40px;
+
+    color:#102b66;
+
+    margin-bottom:10px;
+
+}
+
+.explore-tgpsc .section-header p{
+
+    font-size:18px;
+
+    color:#6b7280;
+
+}
+
+.explore-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.explore-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-decoration:none;
+
+    color:#1f2937;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.explore-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.15);
+
+}
+
+.explore-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:#ffffff;
+
+    margin-bottom:22px;
+
+}
+
+.explore-card h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    color:#102b66;
+
+}
+
+.explore-card h4{
+
+    font-size:16px;
+
+    color:#6b7280;
+
+    font-weight:500;
+
+    margin-bottom:30px;
+
+}
+
+.explore-card span{
+
+    margin-top:auto;
+
+    font-weight:600;
+
+    color:#2563eb;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* Card Colors */
+
+.syllabus .explore-icon{
+
+    background:#2563eb;
+
+}
+
+.mock .explore-icon{
+
+    background:#16a34a;
+
+}
+
+.papers .explore-icon{
+
+    background:#7c3aed;
+
+}
+
+.notification .explore-icon{
+
+    background:#f97316;
+
+}
+
+.series .explore-icon{
+
+    background:#ef4444;
+
+}
+
+.performance .explore-icon{
+
+    background:#0891b2;
+
+}
